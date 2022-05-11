@@ -1,0 +1,71 @@
+/* scroll for setting wordpress */
+/* .yaymail-customizer-page-builder #adminmenuwrap {
+    height: 94vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    
+  } */
+  .yaymail-customizer-page-builder #wpbody-content .error,
+  .yaymail-customizer-page-builder .updated {
+    display: none;
+  }
+  .yaymail-customizer-page-builder #adminmenumain {
+    display: none ;
+  }
+
+  .yaymail-customizer-page-builder #wpcontent {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -32px;
+    opacity: unset;
+  }
+
+  @media screen and (max-width: 782px) {
+    .yaymail-customizer-page-builder #wpcontent {
+      margin-top: -46px;
+      opacity: unset;
+    }
+  }
+
+  .yaymail-customizer-page-builder #wpadminbar {
+    display: none ;
+  }
+
+  .yaymail-customizer-page-builder #wpfooter {
+    display: none !important;
+  }
+
+  .yaymail-customizer-page-builder #wpcontent {
+    padding: 0 !important;
+  }
+
+  .yaymail-customizer-page-builder .update-nag {
+    display: none !important;
+  }
+
+  .yaymail-customizer-page-builder #message {
+    display: none !important;
+  }
+
+  .yaymail-customizer-page-builder .notice {
+    display: none !important;
+  }
+
+  .yaymail-customizer-page-builder #wpbody-content {
+    padding-bottom: 0 !important;
+  }
+  .yaymail-customizer-page-builder #wpbody-content p {
+    margin-bottom: 0;
+  }
+  .yaymail-customizer-page-builder .notice-success {
+    display: none !important;
+  }
+  .yaymail-customizer-page-builder .anticon {
+    vertical-align: -.125em;
+  }
+  .yaymail-customizer-page-builder .anticon::before {
+    content: unset !important;
+  }
+  .yaymail-customizer-page-builder #screen-meta-links {
+    display: none !important;
+  }

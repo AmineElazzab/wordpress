@@ -1,0 +1,1596 @@
+.yay-smtp-wrap {
+  padding: 15px 50px 15px 50px;
+  max-width: 1032px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.yay-smtp-wrap .error-message-email {
+  color: indianred;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.yay-smtp-header {
+  display: flex;
+}
+.yay-smtp-title {
+  width: 30%;
+}
+.yay-button-wrap {
+  width: 70%;
+  text-align: right;
+}
+.yay-button-wrap .yay-tooltip {
+  margin: 0 0 0 10px;
+}
+.yay-smtp-card {
+  margin-bottom: 24px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 1, 0.4, 1);
+}
+.yay-smtp-card-header {
+  display: grid;
+  align-items: center;
+  border-top-left-radius: 4px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.yay-smtp-card-header .yay-smtp-card-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+.yay-smtp-card-header .yay-smtp-card-description {
+  color: #646970;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.yay-smtp-card-body {
+  padding: 24px;
+}
+.yay-smtp-card-body .setting-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.yay-smtp-card-body select,
+.yay-smtp-card-body input[type="text"],
+.yay-smtp-card-body input[type="password"] {
+  min-width: 50%;
+}
+.yay-smtp-card-footer {
+  padding: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+.yay-smtp-card-header select {
+  border-radius: 4px;
+}
+.yay-smtp-mailer.smtper-choose-wrap {
+  width: unset;
+  margin: unset;
+  margin-top: 12px;
+}
+
+.yay-settings.smtper-choose {
+  margin-top: 12px;
+  width: 50%;
+  max-width: unset;
+}
+
+@media only screen and (max-width: 768px) {
+  .yay-smtp-card-body select,
+  .yay-smtp-card-body input[type="text"],
+  .yay-smtp-card-body input[type="password"],
+  .yay-settings.smtper-choose {
+    min-width: 70%;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .yay-smtp-card-body select,
+  .yay-smtp-card-body input[type="text"],
+  .yay-smtp-card-body input[type="password"],
+  .yay-settings.smtper-choose {
+    min-width: 100%;
+  }
+}
+.yay-smtp-card-body input[type="number"] {
+  max-width: 90px;
+}
+.yay-smtp-card-body input[type="radio"],
+.yay-smtp-card-body input[type="number"] {
+  min-width: unset;
+}
+.yay-smtp-card-body .setting-from-email,
+.yay-smtp-card-body .setting-el {
+  margin-bottom: 20px;
+}
+.yay-smtp-card-body .setting-description {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #646970;
+}
+
+.yay-smtp-mailer {
+  display: inline-block;
+  width: 140px;
+  margin: 0 15px 15px 0;
+  position: relative;
+}
+.yay-smtp-mailer .yay-smtp-mailer-image {
+  background: #fff;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 76px;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0px 7px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.yay-smtp-mailer .yay-smtp-mailer-image img {
+  max-width: 90%;
+  max-height: 40px;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.yay-smtp-button {
+  white-space: nowrap;
+  background: #007cba;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  display: inline-flex;
+  font-size: 13px;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
+  height: 36px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+.yay-smtp-button:hover:not(:disabled) {
+  background: #006ba1;
+  color: #fff;
+}
+.yay-smtp-button:disabled {
+  color: #828282;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  opacity: 1;
+  box-shadow: none;
+  outline: none;
+}
+.yay-smtp-button.yaysmtp-import-settings-btn:disabled {
+  opacity: 0.3;
+  background: #007cba;
+  color: #fff;
+}
+.yay-smtp-button span.text {
+  margin-left: 6px;
+}
+
+.yay-smtp-button.panel-tab-btn.other {
+  background: white;
+  color: #72777c;
+  border: 1px solid #ccd0d4;
+}
+
+.yay-smtp-button.panel-tab-btn.other:hover {
+  color: #32373c;
+}
+
+.doc-setting .yay-smtp-button {
+  height: 28px;
+  padding: 6px 6px;
+  background: white;
+  color: #72777c;
+  border: 1px solid #ccd0d4;
+}
+
+.doc-setting .yay-smtp-button:hover {
+  color: #32373c;
+  background: white;
+}
+
+.doc-setting .yay-tooltiptext {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.yay-smtp-button-secondary {
+  color: #0071a1;
+  border-color: #0071a1;
+  background: #f3f5f6;
+  vertical-align: top;
+}
+
+.yay-smtp-button-secondary {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2.15384615;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.yay-smtp-button-secondary:hover {
+  background: #f1f1f1;
+  border-color: #016087;
+  color: #016087;
+}
+
+/** Tooltip - start */
+/* Tooltip container */
+.yay-tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+}
+
+/* Tooltip text */
+.yay-tooltip .yay-tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  width: max-content;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 3px 6px;
+  border-radius: 6px;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.yay-tooltip.icon-tootip-wrap {
+  padding: 5px;
+  cursor: help;
+  vertical-align: middle;
+  margin-left: -5px;
+}
+
+.yay-tooltip .icon-inst-tootip {
+  color: #666;
+  display: inline-block;
+  font-size: 1.1em;
+  font-style: normal;
+  height: 16px;
+  line-height: 16px;
+  position: relative;
+  width: 16px;
+}
+.yay-tooltip .icon-inst-tootip::after {
+  font-family: Dashicons;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-indent: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  content: "";
+  cursor: help;
+  font-variant: normal;
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+.yay-tooltip.icon-tootip-wrap .yay-tooltiptext {
+  padding: 5px 10px;
+}
+
+.yay-tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.yay-tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Tooltip arrow */
+.yay-tooltip-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.yay-tooltip-top::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.yay-tooltip:hover .yay-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/** Tooltip - end */
+
+/** Drawer - start */
+.yay-sidenav {
+  height: calc(100vh - 91px);
+  top: 91px;
+  width: 510px;
+  transform: translateX(100%);
+  transition-property: transform box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  position: fixed;
+  right: 0;
+  z-index: 11;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+}
+.yay-sidenav.is-open {
+  transform: none;
+  box-shadow: 0 12px 12px 0 rgba(85, 93, 102, 0.3);
+}
+.yay-sidenav .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 30px;
+  margin-left: 50px;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.yay-sidenav .closebtn:hover {
+  color: #2c2b2b;
+}
+.yay-smtp-activity-panel-header {
+  height: 50px;
+  background: #e2e4e7;
+  padding: 0px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yay-smtp-activity-panel-content,
+.yay-smtp-debug {
+  padding: 8px 24px 24px 24px;
+  background: #fff;
+  color: #757575;
+  font-size: 13px;
+}
+.yay-smtp-debug {
+  display: none;
+  border-left: 2px solid indianred;
+  margin-left: 24px;
+}
+/** Drawer - end */
+
+.toplevel_page_yay-smtp input[type="email"],
+.toplevel_page_yay-smtp input[type="number"],
+.toplevel_page_yay-smtp input[type="password"],
+.toplevel_page_yay-smtp input[type="text"],
+.toplevel_page_yay-smtp select,
+.toplevel_page_yay-smtp textarea {
+  box-shadow: 0 0 0 transparent;
+  border-radius: 2px;
+  border: 1px solid #757575;
+  background-color: #fff;
+  color: #32373c;
+}
+.toplevel_page_yay-smtp input[type="email"],
+.toplevel_page_yay-smtp input[type="number"],
+.toplevel_page_yay-smtp input[type="password"],
+.toplevel_page_yay-smtp input[type="text"] {
+  padding: 0 8px;
+  min-height: 40px;
+  font-size: 13px;
+  line-height: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 6px 8px;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.1s linear;
+  border-radius: 2px;
+  border: 1px solid #757575;
+}
+.toplevel_page_yay-smtp input[type="email"]:focus,
+.toplevel_page_yay-smtp input[type="number"]:focus,
+.toplevel_page_yay-smtp input[type="password"]:focus,
+.toplevel_page_yay-smtp input[type="text"]:focus,
+.toplevel_page_yay-smtp select:focus,
+.toplevel_page_yay-smtp textarea:focus {
+  border-color: #007cba;
+  box-shadow: 0 0 0 0.5px #007cba;
+  outline: 2px solid transparent;
+}
+.yay-smtp-wrap .panel-tab-btn.is-active {
+  background: #007cba;
+  opacity: 0.5;
+}
+
+/* Style for Test Send Mail - start */
+.yay-smtp-card-body.test-email,
+.yay-smtp-card-body.yay-smtp-mailer-settings {
+  padding: 16px 0;
+}
+.yay-smtp-test-mail-address {
+  width: 100%;
+}
+/* Style for Test Send Mail - end */
+.yay-smtp-mailer.is-active .yay-smtp-mailer-image {
+  border-color: #007cba;
+}
+
+.yay-smtp-wrap input[type="radio"]:checked::before {
+  background-color: #007cba;
+}
+
+.toplevel_page_yay-smtp input:disabled,
+.toplevel_page_yay-smtp select:disabled {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(222, 222, 222, 0.75);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  color: rgba(51, 51, 51, 0.5);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes growAndShrink {
+  0%,
+  100% {
+    stroke-dashoffset: 200;
+  }
+  50% {
+    stroke-dashoffset: 50;
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+.yay-smtp-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 12;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yay-smtp-spinner .woocommerce-spinner__circle {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: growAndShrink 2s ease-in-out infinite;
+  stroke: #1d2327;
+}
+.yay-smtp-spinner .woocommerce-spinner {
+  animation: rotate 2s linear infinite;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  max-height: 40px;
+}
+.yay-smtp-notification {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 13px;
+  background-color: #32373c;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 16px 24px;
+  width: fit-content;
+  max-width: 600px;
+  box-sizing: border-box;
+  cursor: pointer;
+  animation: NslideUp 0.5s both linear;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+@keyframes NslideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes NslideDown {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+}
+
+.yay-smtp-notification .NslideDown {
+  animation: NslideDown 0.5s both linear;
+}
+
+.yay-smtp-wrap .notify-mailer-setting-complete,
+.yay-smtp-wrap .inline-error {
+  color: indianred;
+}
+
+.yay-smtp-wrap label {
+  vertical-align: initial;
+}
+
+.yay-smtp-mailer .yay-smtp-mailer-text {
+  text-align: center;
+}
+
+.yay-smtp-mailer-settings .gmail-connected-as {
+  vertical-align: sub;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.yay-smtp-mailer-settings .radio-setting,
+.yaysmtp-additional-settings-wrap .radio-setting {
+  margin-right: 20px;
+}
+
+.setting-el .yay-zoho-success-authorize {
+  color: green;
+}
+
+.icon-yaysmtp-sent-mail-error {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-left: 5px;
+  padding: 0 5px;
+  min-width: 20px;
+  height: 19px;
+  border-radius: 9px;
+  background-color: #ca4a1f;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  z-index: 26;
+  font-weight: 900;
+}
+
+.yay-smtp-card-debug .yay-smtp-card-title {
+  color: indianred;
+}
+.yay-smtp-card-body .yay-smtp-card-debug-text {
+  border-left: 2px solid indianred;
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* The switch - the box around the slider  - start */
+.yay-smtp-card .switch {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.yay-smtp-card .switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.yay-smtp-card .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.yay-smtp-card .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.yay-smtp-card input[type="checkbox"]:checked + .slider {
+  background-color: #007cba;
+}
+
+.yay-smtp-card input[type="checkbox"]:focus + .slider {
+  box-shadow: 0 0 1px #007cba;
+}
+
+.yay-smtp-card input[type="checkbox"]:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.yay-smtp-card .slider.round {
+  border-radius: 20px;
+}
+
+.yay-smtp-card .slider.round:before {
+  border-radius: 50%;
+}
+.yay-smtp-card .toggle-label {
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: sub;
+  font-size: 16px;
+  color: #646970;
+  margin-left: 10px;
+}
+
+.yay-smtp-card .setting-toggle-checked,
+.yay-smtp-card .setting-toggle-unchecked,
+.yay-smtp-card .setting-toggle-fallback-checked,
+.yay-smtp-card .setting-toggle-fallback-unchecked {
+  display: none;
+}
+
+/* The switch - the box around the slider  -  end */
+
+/* Hide other notice in YaySMTP page */
+.toplevel_page_yaysmtp .notice:not(.yaysmtp-import-settings-notice) {
+  display: none;
+}
+.yaysmtp-import-settings-notice .yaysmtp-notices-title {
+  font-size: 14px;
+}
+.yaysmtp-import-settings-notice .yaysmtp-mess-notices {
+  margin-bottom: 1em;
+}
+.yaysmtp-import-settings-notice .yaysmtp-mess-notices p {
+  padding: unset;
+}
+.yaysmtp-import-settings-notice .button-primary {
+  margin-right: 10px;
+  margin-bottom: 11px;
+}
+/** Email Log - start **/
+.yay-smtp-wrap.mail-logs {
+  padding: 30px 50px 15px 50px;
+}
+.yay-smtp-wrap.mail-logs a,
+.yay-smtp-wrap.yaysmtp-additional-settings-wrap a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.yay-smtp-wrap.mail-logs .yay-smtp-title {
+  width: 25%;
+}
+.yay-smtp-wrap.mail-logs .yay-button-first-header {
+  margin-bottom: 15px;
+  display: flex;
+}
+.yay-smtp-wrap.yaysmtp-additional-settings-wrap .yay-button-first-header {
+  margin-bottom: 20px;
+}
+.yay-smtp-wrap.mail-logs .email-status {
+  flex: 0 1 auto;
+  padding: 2px 5px;
+  border-radius: 3px;
+  height: -webkit-min-content;
+  height: min-content;
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+  font-weight: 400;
+  justify-content: center;
+}
+.yay-smtp-wrap.mail-logs .email-status.email-success {
+  background-color: #4ab866;
+  color: #fff;
+}
+/* .yay-smtp-wrap.mail-logs .email-status.email-waiting {
+  background: #c6e1c6;
+  color: #5b841b;
+} */
+.yay-smtp-wrap.mail-logs .email-status.email-fail {
+  background-color: #d94f4f;
+  color: #fff;
+}
+
+/** UI Woo React **/
+.yay-smtp-wrap.mail-logs .yay-smtp-content {
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+  border: 1px solid rgb(226, 228, 231);
+}
+.yay-smtp-wrap.mail-logs .yay-smtp-content th.table-header.hiden,
+.yay-smtp-wrap.mail-logs .yay-smtp-content td.table-item.hiden {
+  display: none;
+}
+.yay-smtp-wrap.mail-logs .components-body {
+  position: relative;
+}
+/* .yay-smtp-wrap.mail-logs .wrap-table {
+  overflow-x: hidden;
+  overflow-y: hidden;
+} */
+.yay-smtp-wrap.mail-logs table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.yay-smtp-wrap.mail-logs table tr:hover,
+.yay-smtp-wrap.mail-logs table tr:focus-within {
+  background-color: #e0e0e0;
+}
+
+.yay-smtp-wrap.mail-logs table tr:hover th,
+.yay-smtp-wrap.mail-logs table tr:focus-within th {
+  background-color: #e0e0e0;
+}
+
+@media (min-width: 600px) {
+  .yay-smtp-wrap.mail-logs .checkbox-control-input-container {
+    width: 20px;
+    height: 20px;
+  }
+  .yay-smtp-wrap.mail-logs .checkbox-control-input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    font-size: 13px;
+    line-height: normal;
+  }
+}
+
+.yay-smtp-wrap.mail-logs .checkbox-control-input-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.yay-smtp-wrap.mail-logs .checkbox-control-input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px #007cba;
+  outline: 2px solid transparent;
+}
+
+.yay-smtp-wrap.mail-logs input[type="checkbox"]:checked::before {
+  margin: -0.08rem 0 0 -0.15rem;
+}
+
+.yay-smtp-wrap.mail-logs .table-header,
+.yay-smtp-wrap.mail-logs .table-item {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  text-align: right;
+  border-bottom: 1px solid #e2e4e7;
+  padding: 16px 16px;
+}
+.yay-smtp-wrap.mail-logs .table-item.is-left-aligned {
+  text-align: left;
+}
+.yay-smtp-wrap.mail-logs .table-header.is-left-aligned.is-sortable {
+  padding-left: 9px;
+}
+.yay-smtp-wrap.mail-logs .table-header {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: right;
+}
+.yay-smtp-wrap.mail-logs
+  .table-header.is-left-aligned.is-sortable
+  .components-button {
+  justify-content: left;
+}
+.yay-smtp-wrap.mail-logs .table-header.is-left-aligned.is-sortable svg {
+  display: inline-flex;
+  order: 1;
+  margin-left: 0;
+}
+
+.yay-smtp-wrap.mail-logs .table-header.is-sortable svg {
+  visibility: hidden;
+  margin-left: 4px;
+}
+
+.yay-smtp-wrap.mail-logs .components-button svg {
+  fill: currentColor;
+  outline: none;
+}
+
+.yay-smtp-wrap.mail-logs .table-header.is-sortable .components-button:focus svg,
+.yay-smtp-wrap.mail-logs
+  .table-header.is-sortable
+  .components-button:hover
+  svg {
+  visibility: visible;
+}
+
+.yay-smtp-wrap.mail-logs .table-header.is-sortable {
+  padding: 0;
+}
+.yay-smtp-wrap.mail-logs .table-empty-item {
+  padding: 16px 16px;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #757575;
+  font-weight: bold;
+}
+
+.yay-smtp-wrap.mail-logs .table-header.is-checkbox-column,
+.yay-smtp-wrap.mail-logs .table-item.is-checkbox-column {
+  width: 33px;
+  max-width: 33px;
+  padding-right: 0;
+  padding-left: 16px;
+}
+
+.yay-smtp-wrap.mail-logs .table-item.status-col {
+  width: 72px;
+}
+
+.yay-smtp-wrap.mail-logs .table-item.datetime-col {
+  width: 136px;
+}
+
+.yay-smtp-wrap.mail-logs .components-button {
+  display: inline-flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 2px;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  background: none;
+  transition: box-shadow 0.1s linear;
+  height: 36px;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border-radius: 2px;
+  color: #1e1e1e;
+}
+
+.yay-smtp-wrap.mail-logs .components-button:hover {
+  color: #007cba;
+}
+
+.yay-smtp-wrap.mail-logs .components-button:focus:not(:disabled) {
+  box-shadow: 0 0 0 1.5px #007cba;
+  outline: 1px solid transparent;
+}
+
+.yay-smtp-wrap.mail-logs .components-footer {
+  padding: 16px 24px;
+  flex-direction: column;
+}
+.yay-smtp-wrap.mail-logs .pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  z-index: 1;
+  background: #fff;
+  position: relative;
+}
+
+.yay-smtp-wrap.mail-logs .pagination-page-arrows {
+  display: flex;
+  flex-direction: row;
+}
+.yay-smtp-wrap.mail-logs .pagination-page-arrows-label {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.yay-smtp-wrap.mail-logs .pagination-page-arrows-buttons {
+  display: inline-flex;
+  align-items: baseline;
+  border: 1px solid #b5bfc9;
+  border-radius: 4px;
+  background: #f0f2f4;
+}
+
+.yay-smtp-wrap.mail-logs .pagination-page-arrows-buttons button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0;
+  padding-right: 6px;
+  box-shadow: 1px 0 0 0px #b5bfc9;
+}
+.yay-smtp-wrap.mail-logs
+  .pagination-page-arrows-buttons
+  button:first-child
+  .yay-smtp-wrap.mail-logs
+  .pagination-page-arrows-buttons
+  .pagination-link {
+  padding: 4px;
+}
+.yay-smtp-wrap.mail-logs .components-button:disabled,
+.yay-smtp-wrap.mail-logs .components-button[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.yay-smtp-wrap.mail-logs .pagination-page-arrows-buttons .components-button {
+  color: #24292d;
+  height: 30px;
+  width: 32px;
+  justify-content: center;
+}
+
+/** menu__toggle - start */
+.yay-smtp-wrap.mail-logs .components-button.has-icon {
+  padding: 6px;
+  min-width: 36px;
+  justify-content: center;
+}
+.yay-smtp-wrap.mail-logs .components-button.has-icon .dashicon {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+.yay-smtp-wrap.mail-logs .ellipsis-menu__toggle .dashicon {
+  transform: rotate(90deg);
+}
+
+.yay-smtp-wrap.mail-logs .components-dropdown {
+  position: relative;
+  z-index: 9;
+  margin-left: 7px;
+}
+.yay-smtp-wrap.mail-logs .ellipsis-menu__content {
+  position: relative;
+}
+.yay-smtp-wrap.mail-logs .components-popover.components-dropdown__content {
+  position: absolute;
+  right: 15px;
+  padding: 15px;
+  top: calc(100% + 15px);
+  transform-origin: top right;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 5%);
+  border-radius: 2px;
+  width: 266px;
+  text-align: justify;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.yay-smtp-wrap.mail-logs
+  .components-popover.components-dropdown__content.is-opened {
+  opacity: 1;
+  transform: none;
+  pointer-events: all;
+}
+.yay-smtp-wrap.mail-logs .ellipsis-menu__content .ellipsis-menu__title {
+  color: #1e1e1e;
+  padding: 7px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.yay-smtp-wrap.mail-logs
+  .ellipsis-menu__content
+  .components-base-control__field {
+  cursor: pointer;
+  color: #757575;
+  padding: 8px;
+  font-size: 13px;
+  display: flex;
+}
+.yay-smtp-wrap.mail-logs
+  .ellipsis-menu__content
+  .components-base-control__field:focus-within {
+  box-shadow: inset 0 0 0 1px #6c7781, inset 0 0 0 2px #fff;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+}
+/** menu__toggle - end */
+
+.yay-smtp-wrap.mail-logs .pagination-page-arrows-buttons button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.yay-smtp-wrap.mail-logs .pagination-page-picker,
+.yay-smtp-wrap.mail-logs .pagination-per-page-picker {
+  margin-left: 16px;
+}
+
+.yay-smtp-wrap.mail-logs .pagination-page-picker .pagination-page-picker-input {
+  margin-left: 8px;
+  width: 60px;
+  height: 34px;
+  box-shadow: none;
+}
+.yay-smtp-wrap.mail-logs .pagination input {
+  border-radius: 4px;
+}
+
+.yay-smtp-wrap.mail-logs .pagination-per-page-picker {
+  margin-left: 16px;
+}
+.yay-smtp-wrap.mail-logs .components-select-control-input {
+  height: 34px;
+}
+.yay-smtp-wrap.mail-logs .yay-button-wrap {
+  margin-top: 6px;
+  width: 100%;
+  display: inline-flex;
+}
+.yay-smtp-wrap.mail-logs .yay-button-wrap .search {
+  flex-grow: 1;
+}
+.yay-smtp-wrap.mail-logs .yay-button-wrap .search.select-control {
+  position: relative;
+  width: 60%;
+}
+
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .search.select-control
+  .select-control__control {
+  height: 30px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  padding: 3px 2px 3px 36px;
+  border-radius: 4px;
+  border-color: #757575;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 5%);
+}
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .search.select-control
+  .select-control__control:focus-within {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #006088;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .select-control
+  .components-base-control {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #a7aaad;
+  border-radius: 3px;
+  background: #fff;
+  padding: 12px;
+  position: relative;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .search.select-control
+  i.material-icons-outlined {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 20px;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .select-control
+  .components-base-control
+  i {
+  color: #636d75;
+  margin-right: 12px;
+  width: 24px;
+}
+.yay-smtp-wrap.mail-logs .material-icons-outlined {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .select-control
+  .components-base-control
+  .components-base-control__field {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-button-wrap
+  .select-control
+  .components-base-control
+  .select-control__control-input {
+  border: 0;
+  box-shadow: none;
+  color: #2c3338;
+  margin: 12px 0 0 0;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: inherit;
+  background: transparent;
+  margin: 0;
+  font-size: 13px;
+  min-height: auto;
+  width: 100%;
+}
+.yay-smtp-wrap.mail-logs .yay-button-wrap .select-control.bulk-action-control {
+  margin-right: 10px;
+}
+.yay-smtp-wrap.mail-logs .wrap-table .action-col {
+  width: 20%;
+}
+.yay-smtp-wrap.mail-logs .yaysmtp-btn {
+  border: 1px solid transparent;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  cursor: pointer;
+  user-select: none;
+  height: 32px;
+  padding: 0 15px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  border-color: #d9d9d9;
+}
+.yay-smtp-wrap.mail-logs .yaysmtp-btn:hover,
+.yay-smtp-wrap.mail-logs .yaysmtp-btn:focus {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #006088;
+}
+
+/** Slider button */
+.yay-smtp-wrap.mail-logs .components-popover__content .switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+
+.yay-smtp-wrap.mail-logs
+  .components-popover__content
+  .switch
+  input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.yay-smtp-wrap.mail-logs .components-popover__content .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.yay-smtp-wrap.mail-logs .components-popover__content .slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.yay-smtp-wrap.mail-logs
+  .components-popover__content
+  input[type="checkbox"]:checked
+  + .slider {
+  background-color: #007cba;
+}
+
+.yay-smtp-wrap.mail-logs
+  .components-popover__content
+  input[type="checkbox"]:focus
+  + .slider {
+  box-shadow: 0 0 1px #007cba;
+}
+
+.yay-smtp-wrap.mail-logs
+  .components-popover__content
+  input[type="checkbox"]:checked
+  + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.yay-smtp-wrap.mail-logs .components-popover__content .slider.round {
+  border-radius: 9px;
+}
+
+.yay-smtp-wrap.mail-logs .components-popover__content .slider.round:before {
+  border-radius: 50%;
+}
+.yay-smtp-wrap.mail-logs .components-popover__content .toggle-label {
+  color: #646970;
+  margin-left: 10px;
+}
+.yay-smtp-wrap.mail-logs
+  .components-toggle-control
+  .components-base-control__field:focus {
+  box-shadow: inset 0 0 0 1px #6c7781, inset 0 0 0 2px #fff;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+}
+.yay-smtp-wrap.mail-logs .yay-smtp-activity-panel-content.panel-content table {
+  table-layout: fixed;
+}
+.yay-smtp-wrap.mail-logs .yay-smtp-activity-panel-content.panel-content td,
+.yay-smtp-wrap.mail-logs
+  .yay-smtp-activity-panel-content.panel-content
+  .mail-body-el {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-smtp-activity-panel-content.panel-content
+  .content-el {
+  display: flex;
+  flex-wrap: wrap;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-smtp-activity-panel-content.panel-content
+  .content-el
+  span.title {
+  font-weight: 600;
+  width: 60px;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-smtp-activity-panel-content.panel-content
+  .mail-body-el
+  .content-el
+  span.title {
+  width: auto;
+}
+.yay-smtp-wrap.mail-logs
+  .yay-smtp-activity-panel-content.panel-content
+  .content-el
+  .email-status
+  span.content {
+  width: auto;
+}
+.yay-smtp-wrap.mail-logs .yay-smtp-card-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.yay-smtp-wrap.mail-logs .yay-button-first-header .dashicons-arrow-left-alt,
+.yay-smtp-wrap.yaysmtp-additional-settings-wrap
+  .yay-button-first-header
+  .dashicons-arrow-left-alt {
+  color: #0073aa;
+}
+.yay-smtp-wrap.mail-logs .save-setting-el {
+  display: flex;
+}
+.yay-smtp-wrap.mail-logs .save-setting-el .setting-label {
+  margin-right: 20px;
+}
+.yay-smtp-wrap.mail-logs .yay-button-header-child-left {
+  width: 50%;
+}
+.yay-smtp-wrap.mail-logs .yay-button-header-child-right {
+  width: 50%;
+  text-align: right;
+}
+.yay-smtp-wrap.mail-logs .yay-smtp-mail-detail-drawer .status-el .reason_error {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+/** Email Log - end **/
+
+/** SMTPer choose select2 - start **/
+.toplevel_page_yaysmtp
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 30px;
+}
+
+.toplevel_page_yaysmtp .select2-results__option {
+  padding: 10px 8px;
+}
+
+.toplevel_page_yaysmtp .select2-results__option > span,
+.toplevel_page_yaysmtp
+  .yay-smtp-mailer
+  .select2-selection
+  .select2-selection__rendered
+  > span {
+  display: flex;
+  align-items: center;
+}
+
+.toplevel_page_yaysmtp .yay-smtp-mailer .select2-selection {
+  height: auto;
+}
+
+.toplevel_page_yaysmtp .yaysmtp-smtpicon {
+  width: 50px;
+  height: 18px;
+  margin-right: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.toplevel_page_yaysmtp .yaysmtp-amazonses-icon {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 67 40' xml:space='preserve'%3E%3Cstyle%3E.st1%7Bfill:%23f90%7D%3C/style%3E%3Cpath d='M18.9 14.5c0 .8.1 1.5.2 2 .2.5.4 1 .7 1.6.1.2.2.4.2.5 0 .2-.1.4-.4.7l-1.4.9c-.2.1-.4.2-.6.2-.2 0-.4-.1-.7-.3-.3-.3-.6-.7-.8-1-.2-.4-.4-.8-.7-1.3-1.7 2-3.9 3.1-6.5 3.1-1.9 0-3.4-.5-4.5-1.6S2.8 16.8 2.8 15c0-1.9.7-3.4 2-4.6S8 8.6 10.3 8.6c.8 0 1.5.1 2.4.2.8.1 1.7.3 2.6.5V7.6c0-1.7-.4-2.9-1-3.6-.7-.7-1.9-1-3.6-1-.8 0-1.6.1-2.4.3-1 .3-1.8.5-2.6.8-.4.2-.6.3-.8.3s-.3.1-.3.1c-.3 0-.5-.2-.5-.7V2.7c0-.4 0-.6.2-.8.1-.2.3-.3.6-.5.8-.4 1.7-.7 2.8-1C8.8.1 9.9 0 11.1 0c2.6 0 4.6.6 5.8 1.8 1.2 1.2 1.8 3 1.8 5.5l.2 7.2zm-9.1 3.4c.7 0 1.5-.1 2.3-.4.8-.3 1.5-.8 2.1-1.4.4-.4.6-.9.8-1.4.1-.5.2-1.2.2-1.9v-.9c-.6-.2-1.3-.3-2-.4s-1.4-.1-2.1-.1c-1.5 0-2.6.3-3.3.9-.7.6-1.1 1.4-1.1 2.6 0 1 .3 1.8.8 2.4.5.3 1.3.6 2.3.6zm17.9 2.4c-.4 0-.7-.1-.8-.2-.2-.1-.3-.4-.5-.9L21.2 2c-.2-.5-.2-.7-.2-.9 0-.4.2-.6.5-.6h2.2c.4 0 .7.1.9.2.2.1.3.4.4.9l3.7 14.7 3.5-14.7c.1-.4.2-.7.4-.9.2-.1.5-.2.9-.2h1.8c.4 0 .7.1.9.2.2.1.3.4.4.9l3.5 14.9L44 1.6c.1-.4.3-.7.4-.9.2-.1.5-.2.9-.2h2.1c.4 0 .6.2.6.6v.4c0 .1-.1.3-.2.6l-5.4 17.2c-.1.4-.3.7-.5.9-.2.1-.5.2-.8.2h-1.9c-.4 0-.7-.1-.9-.2-.2-.2-.3-.4-.4-.9L34.4 4.8 31 19.1c-.1.4-.2.7-.4.9-.2.2-.5.2-.9.2h-2zm28.6.6c-1.2 0-2.3-.1-3.4-.4-1.1-.3-2-.6-2.6-.9-.4-.2-.6-.4-.7-.6-.1-.2-.1-.4-.1-.6v-1.1c0-.5.2-.7.5-.7.1 0 .3 0 .4.1s.3.1.6.2c.8.3 1.6.6 2.4.8.9.2 1.8.3 2.6.3 1.4 0 2.5-.2 3.3-.7.8-.5 1.2-1.2 1.2-2.1 0-.6-.2-1.1-.6-1.6-.4-.4-1.2-.8-2.2-1.2l-3.2-1c-1.6-.5-2.8-1.3-3.6-2.3-.7-1-1.1-2.1-1.1-3.2 0-.9.2-1.8.6-2.5.4-.7.9-1.3 1.6-1.8.7-.5 1.4-.9 2.3-1.2s1.8-.4 2.8-.4c.5 0 1 0 1.5.1s1 .2 1.4.2c.4.1.9.2 1.3.4.4.1.7.3.9.4.3.2.5.4.7.6.1.1.2.3.2.6v1c0 .5-.2.7-.5.7-.2 0-.5-.1-.8-.3-1.4-.4-2.8-.7-4.4-.7-1.3 0-2.3.2-3 .6-.7.4-1 1.1-1 2 0 .6.2 1.2.7 1.6.4.4 1.3.8 2.4 1.2l3.2 1c1.6.5 2.8 1.2 3.5 2.1.7.9 1 2 1 3.1 0 1-.2 1.8-.6 2.6-.4.8-.9 1.4-1.6 2-.7.6-1.5 1-2.5 1.2-1 .3-2 .5-3.2.5z' fill='%23252f3e'/%3E%3Cpath class='st1' d='M60.5 31.7c-7.3 5.4-18 8.3-27.1 8.3C20.6 40 9 35.3.3 27.4c-.7-.6-.1-1.5.8-1 9.4 5.5 21.1 8.8 33.1 8.8 8.1 0 17.1-1.7 25.3-5.2 1.2-.5 2.2.8 1 1.7z'/%3E%3Cpath class='st1' d='M63.6 28.2c-1-1.2-6.2-.5-8.6-.2-.7.1-.8-.5-.2-1 4.2-2.9 11.1-2.1 11.9-1.1.8 1-.2 7.9-4.1 11.2-.6.5-1.2.2-.9-.4.8-2.3 2.8-7.3 1.9-8.5z'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-gmail-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52.4 40'%3E%3Cpath d='M.3 4.3C.2 4.9 0 5.5 0 6.2v29.2C0 38 2.1 40 4.6 40h7.8V18.8l-9.8-7.7C.5 9.5 0 6.4.3 4.3z' fill='%234285f4'/%3E%3Cpath d='M.3 4.3z' fill='%234067b6'/%3E%3Cpath d='M50.8 2.4C48.6-.3 44.3 0 42.4 1.3L26.2 13.9 10 1.3C7.3-.8 3.6.1 1.4 2.7c-.4.6-.7.9-.9 1.5.9-2.3 3-4.2 5.7-4.2 3.4 0 6.2 2.8 6.2 6.2v12.6l13.9 10.8L40 18.8V6.2C40 2.8 42.8.3 46.2.3' fill='%23ea4335'/%3E%3Cpath d='M.3 4.2c-.8 2.3 0 5.1 2 6.7l10.1 7.9V6.2C12.4 2.8 9.6 0 6.2 0 3.5 0 1.3 1.7.4 4l-.1.2z' fill='%23c5221f'/%3E%3Cpath d='M50 11l-10 7.8V40h7.8c2.5 0 4.6-2 4.6-4.6V6.7c-.2 1.6-1 3.2-2.4 4.3z' fill='%2334a853'/%3E%3Cpath d='M52.4 6.7v-.4c0-3.5-2.8-6.2-6.2-6.2C42.8 0 40 2.8 40 6.2v12.6L50 11c1.4-1.1 2.2-2.7 2.4-4.3z' fill='%23fbbc04'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-mail-icon {
+  background-image: url("data:image/svg+xml,%3Csvg height='383.598' width='711.201' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CclipPath clipPathUnits='userSpaceOnUse' id='a'%3E%3Cpath d='M11.52 162C11.52 81.677 135.307 16.561 288 16.561S564.481 81.677 564.481 162c0 80.322-123.788 145.439-276.481 145.439-152.693 0-276.48-65.117-276.48-145.439'/%3E%3C/clipPath%3E%3CclipPath clipPathUnits='userSpaceOnUse' id='c'%3E%3Cpath d='M0 324h576V0H0v324z'/%3E%3C/clipPath%3E%3CclipPath clipPathUnits='userSpaceOnUse' id='d'%3E%3Cpath d='M0 324h576V0H0v324z'/%3E%3C/clipPath%3E%3CradialGradient cx='0' cy='0' fx='0' fy='0' gradientTransform='matrix(363.05789 0 0 -363.05789 177.52 256.307)' gradientUnits='userSpaceOnUse' id='b' r='1' spreadMethod='pad'%3E%3Cstop offset='0' stop-color='%23aeb2d5'/%3E%3Cstop offset='.3' stop-color='%23aeb2d5'/%3E%3Cstop offset='.75' stop-color='%23484c89'/%3E%3Cstop offset='1' stop-color='%23484c89'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='matrix(1.25 0 0 -1.25 -4.4 394.299)'%3E%3Cpath d='M11.52 162C11.52 81.677 135.307 16.561 288 16.561S564.481 81.677 564.481 162c0 80.322-123.788 145.439-276.481 145.439-152.693 0-276.48-65.117-276.48-145.439' fill='url(%23b)'/%3E%3C/g%3E%3Cg clip-path='url(%23c)' transform='matrix(1.25 0 0 -1.25 -4.4 394.299)'%3E%3Cpath d='M288 27.36c146.729 0 265.68 60.28 265.68 134.64 0 74.36-118.951 134.641-265.68 134.641S22.32 236.36 22.32 162.001C22.32 87.64 141.271 27.358 288 27.358' fill='%23777bb3'/%3E%3C/g%3E%3Cg clip-path='url(%23d)' transform='matrix(1.25 0 0 -1.25 -4.4 394.299)'%3E%3Cpath d='M161.734 145.307c12.065 0 21.072 2.225 26.771 6.61 5.638 4.342 9.532 11.863 11.573 22.354 1.903 9.806 1.178 16.653-2.154 20.348-3.407 3.774-10.773 5.688-21.893 5.688h-19.28l-10.69-55h15.673zm-63.063-67.75a2.998 2.998 0 00-2.944 3.572l28.328 145.75a3 3 0 002.945 2.428h61.054c19.188 0 33.47-5.21 42.447-15.487 9.025-10.331 11.812-24.772 8.283-42.921-1.436-7.394-3.906-14.261-7.34-20.41-3.44-6.154-7.985-11.85-13.512-16.93-6.616-6.191-14.104-10.681-22.236-13.323-8.003-2.607-18.28-3.93-30.548-3.93h-24.722l-7.06-36.321a3 3 0 00-2.944-2.428h-31.75z'/%3E%3Cpath d='M159.224 197.307h16.808c13.42 0 18.083-2.945 19.667-4.7 2.628-2.914 3.124-9.058 1.435-17.767-1.898-9.75-5.416-16.663-10.458-20.545-5.162-3.974-13.554-5.988-24.941-5.988H149.7l9.523 49zm28.83 35H127a6 6 0 01-5.89-4.855L92.784 81.702a6 6 0 015.889-7.144h31.75a6 6 0 015.89 4.854l6.588 33.895h22.249c12.582 0 23.174 1.372 31.479 4.077 8.54 2.775 16.399 7.48 23.354 13.984 5.752 5.292 10.49 11.232 14.08 17.657 3.59 6.427 6.17 13.594 7.668 21.302 3.715 19.104.697 34.402-8.97 45.466-9.571 10.958-24.613 16.514-44.705 16.514m-45.633-90h19.313c12.8 0 22.336 2.411 28.6 7.234 6.267 4.824 10.493 12.875 12.689 24.157 2.1 10.832 1.144 18.476-2.871 22.93-4.02 4.452-12.06 6.68-24.121 6.68h-21.754l-11.856-61m45.633 84c18.367 0 31.766-4.82 40.188-14.462 8.42-9.64 10.957-23.098 7.597-40.375-1.383-7.117-3.722-13.624-7.015-19.519-3.297-5.899-7.602-11.293-12.922-16.184-6.34-5.933-13.383-10.16-21.133-12.679-7.75-2.525-17.621-3.782-29.621-3.782h-27.196l-7.531-38.75h-31.75L127 226.307h61.055' fill='%23fff'/%3E%3Cpath d='M311.583 116.307c-.896 0-1.745.4-2.314 1.092a2.994 2.994 0 00-.631 2.48l12.531 64.489c1.192 6.133.898 10.535-.827 12.395-1.056 1.137-4.228 3.044-13.607 3.044h-22.702l-15.755-81.072a3 3 0 00-2.945-2.428h-31.5a2.998 2.998 0 00-2.945 3.572l28.328 145.75a3 3 0 002.945 2.428h31.5a3 3 0 002.945-3.572l-6.836-35.178h24.422c18.605 0 31.221-3.28 38.569-10.028 7.49-6.884 9.827-17.891 6.947-32.72l-13.18-67.824a3 3 0 00-2.945-2.428h-32z'/%3E%3Cpath d='M293.661 271.057h-31.5a6 6 0 01-5.89-4.855l-28.328-145.75a5.998 5.998 0 015.89-7.145h31.5a6 6 0 015.89 4.855l15.283 78.645h20.23c9.362 0 11.327-2 11.406-2.086.568-.61 1.315-3.44.082-9.78l-12.53-64.49a5.998 5.998 0 015.89-7.144h32a6 6 0 015.89 4.855l13.178 67.825c3.093 15.921.447 27.864-7.86 35.5-7.929 7.281-21.209 10.82-40.6 10.82h-20.784l6.143 31.605a6.001 6.001 0 01-5.89 7.145m0-6l-7.53-38.75h28.061c17.657 0 29.836-3.082 36.54-9.238 6.702-6.16 8.71-16.14 6.031-29.938l-13.18-67.824h-32l12.531 64.488c1.426 7.336.902 12.34-1.574 15.008-2.477 2.668-7.746 4.004-15.805 4.004H281.56l-16.226-83.5h-31.5l28.328 145.75h31.5' fill='%23fff'/%3E%3Cpath d='M409.55 145.307c12.065 0 21.072 2.225 26.77 6.61 5.639 4.34 9.533 11.862 11.575 22.354 1.903 9.806 1.178 16.653-2.155 20.348-3.407 3.774-10.773 5.688-21.893 5.688h-19.281l-10.69-55h15.674zm-63.062-67.75a2.999 2.999 0 00-2.945 3.572l28.328 145.75a3.002 3.002 0 002.946 2.428h61.053c19.189 0 33.47-5.21 42.448-15.487 9.025-10.33 11.81-24.771 8.283-42.921-1.438-7.394-3.907-14.261-7.342-20.41-3.44-6.154-7.984-11.85-13.511-16.93-6.616-6.191-14.104-10.681-22.236-13.323-8.003-2.607-18.281-3.93-30.548-3.93H388.24l-7.057-36.321a3.001 3.001 0 00-2.946-2.428h-31.75z'/%3E%3Cpath d='M407.04 197.307h16.807c13.421 0 18.083-2.945 19.667-4.7 2.63-2.914 3.125-9.058 1.435-17.766-1.898-9.75-5.417-16.664-10.458-20.546-5.162-3.974-13.554-5.988-24.94-5.988h-12.034l9.522 49zm28.83 35h-61.054a6 6 0 01-5.889-4.855L340.6 81.702a6 6 0 015.889-7.144h31.75a6 6 0 015.89 4.854l6.587 33.895h22.25c12.581 0 23.173 1.372 31.478 4.077 8.541 2.775 16.401 7.481 23.356 13.986 5.752 5.291 10.488 11.23 14.078 17.655 3.591 6.427 6.171 13.594 7.668 21.302 3.715 19.105.697 34.403-8.969 45.467-9.572 10.957-24.613 16.513-44.706 16.513m-45.632-90h19.312c12.801 0 22.336 2.411 28.601 7.234 6.267 4.824 10.492 12.875 12.688 24.157 2.102 10.832 1.145 18.476-2.87 22.93-4.02 4.452-12.06 6.68-24.122 6.68h-21.754l-11.855-61m45.632 84c18.367 0 31.766-4.82 40.188-14.462 8.422-9.64 10.957-23.098 7.597-40.375-1.383-7.117-3.722-13.624-7.015-19.519-3.297-5.899-7.602-11.293-12.922-16.184-6.34-5.933-13.383-10.16-21.133-12.679-7.75-2.525-17.62-3.782-29.62-3.782h-27.197l-7.53-38.75h-31.75l28.328 145.75h61.054' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-mailgun-icon {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 115 32' xml:space='preserve'%3E%3Cstyle%3E.st1%7Bfill:%23555%7D%3C/style%3E%3Cpath d='M12.6 10.9c-2.6 0-4.8 2.1-4.8 4.8 0 2.6 2.1 4.8 4.7 4.8h.1c2.6 0 4.8-2.1 4.8-4.8 0-2.6-2.2-4.8-4.8-4.8zm-7.5 4.8c0-4.1 3.3-7.4 7.4-7.4 4.1 0 7.4 3.3 7.4 7.4 0 .2 0 .6-.1.8-.1.7.5 1.3 1.2 1.3 1.2 0 1.4-1.5 1.4-2.1 0-5.4-4.5-9.9-9.9-9.9s-9.9 4.5-9.9 9.9c0 5.5 4.5 9.9 9.9 9.9 2.9 0 5.5-1.2 7.3-3.3l2 1.7c-2.2 2.6-5.6 4.2-9.3 4.2C5.7 28.3 0 22.7 0 15.7v-.1C0 8.8 5.6 3.1 12.6 3.1c6.9 0 12.5 5.7 12.5 12.6 0 2.8-1.3 5-4 5-1.1 0-1.9-.6-2.3-1.1a7.48 7.48 0 01-6.3 3.5c-4.1 0-7.4-3.3-7.4-7.4zm7.5-2.2c1.2 0 2.2 1 2.2 2.2s-1 2.2-2.2 2.2c-1.2 0-2.2-1-2.2-2.2 0-1.3 1-2.2 2.2-2.2z' fill='%23c02428'/%3E%3Cpath class='st1' d='M28.3 11v13.5h3.1v-6.9c0-2.9.7-4.1 2.5-4.1 1.4 0 2 1.1 2 3.6v7.5H39v-6.9c0-2.9.7-4.1 2.5-4.1 1.5 0 2 1 2 3.6v7.5h3.1v-8.5c0-3.7-1.5-5.5-4.5-5.5-1.6 0-3 .7-4 2-.8-1.3-2.1-2-3.6-2-1.3 0-2 .3-3.2 1.6V11h-3zm29.9 0v1.5c-1.4-1.4-2.5-2-4.2-2-3.6 0-6.3 3-6.3 7 0 4.2 2.7 7.2 6.4 7.2 1.6 0 2.7-.5 4.1-1.8v1.4h3.1V11h-3.1zm-3.6 2.4c2.3 0 3.8 1.8 3.8 4.3 0 2.6-1.5 4.4-3.8 4.4-2.2 0-3.7-1.8-3.7-4.4 0-2.4 1.6-4.3 3.7-4.3zM66.9 11h-3.1v13.5h3.1V11zm-1.5-7.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM69.7 0h3.1v24.4h-3.1V0zM88.1 11H85v1.5c-1.1-1.2-2.6-1.9-4.2-1.9-3.6 0-6.3 3-6.3 7.2 0 4.1 2.7 7 6.2 7 1.7 0 3-.6 4.2-2v1.9c0 2.9-1.1 4.2-3.4 4.2-1.2 0-2.4-.6-3-1.5-.3-.6-.4-1.1-.5-2.2h-3c0 4.1 2.5 6.6 6.5 6.6 2.3 0 4.3-.9 5.4-2.6.9-1.3 1.1-2.4 1.1-5.1l.1-13.1zm-6.7 2.4c2.3 0 3.7 1.8 3.7 4.3 0 2.6-1.5 4.4-3.7 4.4-2.3 0-3.7-1.7-3.7-4.3s1.4-4.4 3.7-4.4zM93.1 11H90v7.8c0 2.1.4 3.3 1.4 4.4 1.1 1.1 2.6 1.7 4.3 1.7 1.8 0 3.2-.6 4.4-1.7 1.1-1.1 1.4-2.3 1.4-4.4V11h-3.1v7.7c0 2.3-.8 3.3-2.7 3.3-1.8 0-2.6-1.1-2.6-3.3V11zm10.4 0v13.5h3.1V18c0-3.3.7-4.6 2.8-4.6 1.9 0 2.5.9 2.5 3.5v7.6h3.1v-8.3c0-3.7-1.5-5.6-4.9-5.6-1.5 0-2.4.4-3.6 1.6V11h-3z'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-mailjet-icon {
+  background-image: url("data:image/svg+xml,%3Csvg id='mailjet' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 72.4'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fead0d%7D.cls-2%7Bfill:%23282828%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M38.32 47.19l-5.19-11.61-.09.09 5.27 11.53.01-.01z'/%3E%3Cpath class='cls-1' d='M0 24.26L22.92 34.7l4.52-4.63-11.54-5.28h.02l-.25-.12 36.68-14.09.29-.11-.11.29-14.1 36.68-.11-.25-.01.01-5.27-11.53-4.64 4.51 10.45 22.93L63.11 0 0 24.26z'/%3E%3Cpath class='cls-2' d='M112.35 108.62a12.94 12.94 0 0111.38 13l.13 18.17h-6.32V122a7.15 7.15 0 00-7.15-7.14 7.14 7.14 0 00-7.14 7.14v17.79h-6.32v-17.64a7.25 7.25 0 00-7.25-7.25h-.06a7.09 7.09 0 00-7.09 7.1v17.85h-6.37V109h6.37v3.29s1.9-3.61 8-3.61 9.51 5.85 9.51 5.85a12.44 12.44 0 0112.31-5.91zm-12.89 10.77M129.73 116.07a14.29 14.29 0 015.37-5.56 14.61 14.61 0 017.5-2 14 14 0 016.48 1.43 13.15 13.15 0 014.42 3.55V109h6.56v30.8h-6.56v-4.58a13 13 0 01-4.51 3.63 14.11 14.11 0 01-6.5 1.46 14 14 0 01-7.42-2.05 14.61 14.61 0 01-5.34-5.7 17.27 17.27 0 01-2-8.3 16.82 16.82 0 012-8.19zm22.43 2.8a9.26 9.26 0 00-8.19-4.81 9.53 9.53 0 00-4.68 1.2 9.27 9.27 0 00-3.51 3.52 10.89 10.89 0 00-1.34 5.51 11.33 11.33 0 001.34 5.59 9.38 9.38 0 003.54 3.66 9.18 9.18 0 004.68 1.26 9.21 9.21 0 008.19-4.84 11.13 11.13 0 001.34-5.56 11 11 0 00-1.37-5.53zM168.29 104a3.39 3.39 0 010-4.71 3.19 3.19 0 012.36-1 3.1 3.1 0 012.3 1 3.31 3.31 0 01-2.3 5.66 3.23 3.23 0 01-2.36-.95z' transform='translate(0 -91.8)'/%3E%3Cpath class='cls-2' d='M167.41 17.23h6.37v30.8h-6.37z'/%3E%3Cpath class='cls-2' d='M187.52 93.81v46h-6.38v-46zM188.4 155h-.4v-5.85a6.89 6.89 0 006.9-6.89V109h6.37v33a12.91 12.91 0 01-12.87 13zM195.78 104a3.36 3.36 0 012.39-5.75 3.3 3.3 0 013.31 3.36 3.27 3.27 0 01-1 2.39 3.22 3.22 0 01-2.35 1 3.27 3.27 0 01-2.35-1zM235.34 131.27a13.75 13.75 0 01-4.85 6.35 14.83 14.83 0 01-9.08 2.72 15.78 15.78 0 01-7.91-2 14.1 14.1 0 01-5.48-5.59 17.08 17.08 0 01-2-8.36A17.54 17.54 0 01208 116a13.65 13.65 0 015.43-5.56 16.18 16.18 0 018-2 15.64 15.64 0 017.77 1.91 13.41 13.41 0 015.31 5.33 16.08 16.08 0 011.9 7.92 20 20 0 01-.22 3.13h-23.56a8.55 8.55 0 002.74 5.92 8.65 8.65 0 006 2.24 7.44 7.44 0 007-3.72zm-5.6-9.61a7.24 7.24 0 00-2.52-5.64 9 9 0 00-6.09-2.13 8.19 8.19 0 00-5.65 2.1 8.8 8.8 0 00-2.79 5.67zM243.51 139.71v-24.49h-4.31V109h4.31v-9.46h5.76V109H256v6.19h-6.73v24.49zM79.05 152.52a3.69 3.69 0 011.67-.38 3.67 3.67 0 013.33 2 4.71 4.71 0 01.5 2.19 4.78 4.78 0 01-.5 2.2 3.83 3.83 0 01-1.39 1.47 3.61 3.61 0 01-1.94.54 3.77 3.77 0 01-1.72-.34 3.25 3.25 0 01-1.16-.95v1.18h-1.65v-11.76h1.69v4.82a3.14 3.14 0 011.17-.97zm3.44 2.34a2.35 2.35 0 00-.92-.93 2.39 2.39 0 00-1.22-.32 2.4 2.4 0 00-2.13 1.27 3.35 3.35 0 000 2.94 2.43 2.43 0 00.92 1 2.46 2.46 0 001.21.32 2.4 2.4 0 001.22-.33 2.46 2.46 0 00.92-1 3.08 3.08 0 00.34-1.48 3 3 0 00-.34-1.47zM92.65 152.39l-4.92 11.81H86l1.63-3.91-3.16-7.9h1.85l2.26 6.12 2.35-6.12zM105 154.41a3.42 3.42 0 01-1.42 1.34 5 5 0 01-2.37.51h-1.73v4.15h-2.82v-11.56h4.56a5.19 5.19 0 012.34.48 3.34 3.34 0 011.43 1.32 4 4 0 010 3.76zm-2.8-.77a1.66 1.66 0 000-2.14 1.71 1.71 0 00-1.2-.38h-1.52V154H101a1.71 1.71 0 001.21-.36zM113.42 158.37h-3.87l-.69 2h-3l4.18-11.56h2.82l4.18 11.56h-3zm-.72-2.18l-1.21-4.19-1.2 4.23zM126.3 148.85v2.63h-3.07v8.93h-2.81v-8.93h-3.06v-2.63zM138.56 148.85v11.56h-2.81v-4.76h-4v4.76h-2.81v-11.56h2.81v4.53h4v-4.53zM155.78 148.85L153 160.41h-2.9l-1.35-7.61-1.9 7.61h-2.72l-2.72-11.56h2.57l1.6 6.84 1.66-6.84H150l1.45 6.84 1.6-6.84zM161.49 148.85v11.56h-2.82v-11.56zM170.57 160.41l-2.41-4.41h-.52v4.37h-3v-11.52h4.73a5.21 5.21 0 012.33.48 3.29 3.29 0 011.44 1.31 3.71 3.71 0 01.47 1.85 3.41 3.41 0 01-.65 2.06 3.49 3.49 0 01-1.91 1.28l2.66 4.58zm-2.93-6.36h1.59a1.59 1.59 0 001.16-.37 1.44 1.44 0 00.39-1.07 1.38 1.38 0 00-.39-1 1.59 1.59 0 00-1.16-.38h-1.59zM179.22 151.47v2h3.66v2.18h-3.66v2.17H184v2.62h-7.6v-11.59h7.6v2.62z' transform='translate(0 -91.8)'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-outlookms-icon {
+  background-image: url("data:image/svg+xml,%3Csvg id='outlook' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 255.98'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%230364b8%7D.cls-3%7Bfill:%2328a8ea%7D.cls-4%7Bfill:%230078d4%7D.cls-6%7Bfill:none%7D.cls-11%7Bfill-opacity:.1%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M228.75 16H91.22A11.28 11.28 0 0080 27.24V40l77.52 24L240 40V27.24A11.28 11.28 0 00228.75 16z' transform='translate(0 -.01)'/%3E%3Cpath d='M253.18 139.24A90.49 90.49 0 00256 128a5.37 5.37 0 00-2.66-4.62h-.11l-86.7-49.39a12 12 0 00-13 0L66.8 123.31h-.1A5.35 5.35 0 0064 128a92.3 92.3 0 002.8 11.24l91.93 67.23z' transform='translate(0 -.01)' fill='%230a2767'/%3E%3Cpath class='cls-3' d='M192 40h-56l-16.18 24L136 88l56 48h48V88z' transform='translate(0 -.01)'/%3E%3Cpath class='cls-4' d='M80 40h56v48H80z' transform='translate(0 -.01)'/%3E%3Cpath d='M192 40h48v48h-48z' transform='translate(0 -.01)' fill='%2350d9ff'/%3E%3Cpath class='cls-1' d='M192 136l-56-48H80v48l56 48 86.65 14.14z' transform='translate(0 -.01)'/%3E%3Cpath class='cls-6' d='M80.24 40H240' transform='translate(0 -.01)'/%3E%3Cpath class='cls-4' d='M136 88h56v48h-56z' transform='translate(0 -.01)'/%3E%3Cpath d='M80 136h56v48H80z' transform='translate(0 -.01)' fill='%23064a8c'/%3E%3Cpath class='cls-4' d='M192 136h48v48h-48z' transform='translate(0 -.01)'/%3E%3Cpath d='M161.52 201.74l-94.35-68.8 4-7 87.27 49.7a4.25 4.25 0 003.37-.1l87.44-49.84 4 6.95z' transform='translate(0 -.01)' fill-opacity='.5' fill='%230a2767'/%3E%3Cpath d='M253.32 132.62l-.11.06-86.7 49.39a12 12 0 01-11.68.72L185 223.3l66 14.37a12 12 0 005-9.72V128a5.34 5.34 0 01-2.67 4.62z' transform='translate(0 -.01)' fill='%231490df'/%3E%3Cpath d='M256 228v-5.9l-79.86-45.5-9.64 5.49a12 12 0 01-11.68.72L185 223.29l66 14.37a12 12 0 005-9.71z' transform='translate(0 -.01)' fill-opacity='.05'/%3E%3Cpath class='cls-11' d='M255.58 231.06L168 181.19l-1.56.89a12 12 0 01-11.68.72L185 223.29l66 14.37a12.06 12.06 0 004.56-6.65z' transform='translate(0 -.01)'/%3E%3Cpath class='cls-3' d='M66.79 132.72v-.08h-.08l-.24-.16A5.23 5.23 0 0164 128v100a12 12 0 0012 12h168a11.8 11.8 0 003-.4 4.89 4.89 0 001.44-.48 1.05 1.05 0 00.48-.16 8.15 8.15 0 001.84-1l.32-.24z' transform='translate(0 -.01)'/%3E%3Cpath class='cls-11' d='M144 197.33V66.68A10.75 10.75 0 00133.32 56H80.24v59.65l-13.45 7.66h-.1A5.34 5.34 0 0064 128v80h69.33A10.74 10.74 0 00144 197.33z' transform='translate(0 -.01)'/%3E%3Cpath d='M136 205.33V74.68A10.75 10.75 0 00125.33 64H80.24v51.65l-13.45 7.66h-.1A5.34 5.34 0 0064 128v88h61.34A10.74 10.74 0 00136 205.33zm0-16V74.68A10.75 10.75 0 00125.33 64H80.24v51.65l-13.45 7.66h-.1A5.34 5.34 0 0064 128v72h61.34A10.75 10.75 0 00136 189.33zm-8 0V74.68A10.75 10.75 0 00117.33 64H80.24v51.65l-13.45 7.66h-.1A5.34 5.34 0 0064 128v72h53.34A10.75 10.75 0 00128 189.33z' transform='translate(0 -.01)' fill-opacity='.2'/%3E%3Cpath class='cls-4' d='M10.66 64h106.66A10.71 10.71 0 01128 74.67v106.66A10.71 10.71 0 01117.32 192H10.66A10.71 10.71 0 010 181.33V74.67A10.71 10.71 0 0110.66 64z' transform='translate(0 -.01)'/%3E%3Cpath d='M30.93 107.75a33.42 33.42 0 0113.14-14.51A39.65 39.65 0 0165 88a36.93 36.93 0 0119.31 5A33.16 33.16 0 0197 106.83a44.81 44.81 0 014.48 20.39 47.11 47.11 0 01-4.62 21.33 33.78 33.78 0 01-13.12 14.35 38.39 38.39 0 01-20 5.1A37.85 37.85 0 0144 163a33.69 33.69 0 01-13-13.9 43.72 43.72 0 01-4.53-20.16 48.55 48.55 0 014.45-21.19zm14 34.06a21.74 21.74 0 007.39 9.55 19.36 19.36 0 0011.55 3.48 20.27 20.27 0 0012.32-3.59 20.79 20.79 0 007.18-9.57 36.93 36.93 0 002.29-13.33 40.65 40.65 0 00-2.15-13.48 21.39 21.39 0 00-6.93-9.93 19.09 19.09 0 00-12.22-3.78 19.9 19.9 0 00-11.81 3.51A22 22 0 0045 114.3a38.22 38.22 0 00-.05 27.51z' transform='translate(0 -.01)' fill='%23fff'/%3E%3Cpath class='cls-6' d='M0 0h256v256H0z' transform='translate(0 -.01)'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-pepipost-icon {
+  background-image: url("data:image/svg+xml,%3Csvg id='pepipost' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 63.44'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%239d1b40%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M8.92 132.11c4.23-.05 9.91.37 14.13-.28 5.35-.84 9.65-3.29 12-8.38a19.82 19.82 0 001.38-9.76 14.29 14.29 0 00-10.11-13.15 24.46 24.46 0 00-7.73-1.18H-.03v49.05h8.95zm8.86-24.63a24.49 24.49 0 013.64.31c4 .66 5.84 2.82 6.18 6.91a13.24 13.24 0 01-.13 3.39c-.64 3.52-2.62 5.37-6.24 5.87-3.87.53-8.43.15-12.31.28v-16.76zM85.64 148.39l1.08.28a25.25 25.25 0 006.38.44c7.44-.35 12.72-4.31 14.6-11.3a28.14 28.14 0 00-.7-17 14 14 0 00-9.43-8.9 21.57 21.57 0 00-9.57-.41 12.38 12.38 0 00-11.21 13.26c.26 5.62 0 11.27 0 16.9v20.33h8.88zm0-7.93v-8.65-8.52c0-2.41.86-3.49 3.2-4.1a11.77 11.77 0 015.44-.17 5.78 5.78 0 014.53 4.42 26.25 26.25 0 01.44 12.33c-.86 4.32-3.51 6.18-8.11 6.4a37.27 37.27 0 01-5.53-.36zM140.06 148.39l1.07.28a25.31 25.31 0 006.38.44c7.45-.35 12.73-4.31 14.6-11.3a28 28 0 00-.7-17 14 14 0 00-9.43-8.9 21.56 21.56 0 00-9.59-.41 12.39 12.39 0 00-11.21 13.26c.26 5.62.06 11.27.06 16.9v20.33h8.88zm0-7.93c.05-2.88 0-5.77 0-8.65v-8.52c0-2.41.86-3.49 3.21-4.1a11.77 11.77 0 015.44-.17 5.79 5.79 0 014.53 4.42 26.38 26.38 0 01.44 12.33c-.86 4.32-3.51 6.18-8.11 6.4a37.27 37.27 0 01-5.53-.36zM72.11 133.4a41.5 41.5 0 00-.22-7.94c-.77-4.94-2.73-9.21-7-12.06-3.28-2.18-7-2.49-10.82-2.29a14.86 14.86 0 00-13.27 10 29.43 29.43 0 00-.8 15.49c1 5.23 3.85 9.1 8.92 11.12a20.74 20.74 0 008.37 1.16 27.92 27.92 0 0011.87-2.83l.88-.42v-7.21c-.62.24-.86.4-1.34.6a25 25 0 01-8.23 2.2c-7.86.45-10.61-1.34-11.7-5a12.34 12.34 0 01-.44-2.57v-.26zm-23.84-6a14.12 14.12 0 01.28-2.25c.13-.63.26-1.26.44-1.88a6.16 6.16 0 015.51-4.82 6.77 6.77 0 016.71 3.3 14.21 14.21 0 011.6 4.64l.16 1zM189.35 111.71a23 23 0 00-8.47-.32c-6.24.9-10.68 4.13-12.71 10.21a26.94 26.94 0 00-.22 16.26 14.18 14.18 0 009.72 10.14 19 19 0 006.46.9h1.44c7.75-.17 13.34-4.49 15.21-12a27.38 27.38 0 00-.36-15 14.31 14.31 0 00-11.07-10.19zm2.75 24.41a6.57 6.57 0 01-5.74 5.33 12.48 12.48 0 01-4.18 0c-3-.5-5-2.07-5.72-5.11a28.54 28.54 0 01-.58-6.3 25.22 25.22 0 01.67-6.57 6.28 6.28 0 015.32-4.77 11.7 11.7 0 013.78-.17c4.41.57 6.48 2.95 6.89 7.95.09 1.17.11 2.35.14 3a29.83 29.83 0 01-.58 6.64zM227.14 120.56a19.37 19.37 0 00-11.41-1.56 7 7 0 00-1.27.32c-1.12.41-2 1-2.08 2.39a2.63 2.63 0 001.77 2.51c2.28 1.15 4.79 1.6 7.18 2.4 3 1 5.7 2.56 7.12 5.55 3.43 7.22.65 14.65-8.44 16.42a22.57 22.57 0 01-14.51-2.09c-.44-.22-1-.58-1-.58v-7.8a24.5 24.5 0 005.58 2.54 18.37 18.37 0 008 .41 3 3 0 002.76-2.4 3 3 0 00-1.78-3.43c-2.46-1.37-5.25-1.86-7.85-2.84a17 17 0 01-4-1.93c-5.43-3.83-4.59-12.83-.17-16.17 3.65-2.76 7.75-3.44 12.13-3a21.21 21.21 0 017.92 2.36zM238.44 119.24c0 5.81-.07 13 .05 18.77a10.39 10.39 0 004.07 8.57c4 3 8.37 2.8 12.87 1.48a4.54 4.54 0 00.57-.24v-.65-6.58a26 26 0 01-2.61.59 14.87 14.87 0 01-2.75.07c-2.31-.17-3.27-1.14-3.28-3.39v-18.69H256v-7.48h-8.57v-10.87h-9v10.87h-6.17v7.58z' transform='translate(0 -98.57)'/%3E%3Cpath class='cls-1' d='M115.21 13.1h8.81v36.69h-8.81zM115.21 0h8.81v8.17h-8.81z'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-postmark-icon {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='postmark_1_' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 256 256' xml:space='preserve'%3E%3Cstyle%3E.st2%7Bfill:%23fff%7D%3C/style%3E%3Cg id='postmark'%3E%3Cpath d='M253 231.6v11.7c-5.4 0-9.8 4.4-9.8 9.8h-11.7c0-5.4-4.4-9.8-9.8-9.8s-9.8 4.4-9.8 9.7h-11.7c.2-5.4-4.1-9.9-9.5-10.1-5.4-.2-9.9 4.1-10.1 9.5v.6H169c0-5.4-4.4-9.8-9.8-9.8s-9.8 4.4-9.8 9.8h-11.7c0-5.4-4.4-9.8-9.8-9.8s-9.8 4.4-9.8 9.8h-11.7c-.3-5.4-4.9-9.5-10.3-9.2-5 .3-8.9 4.2-9.2 9.2H75.3c0-5.4-4.4-9.8-9.8-9.8s-9.8 4.4-9.8 9.8H44c0-5.4-4.4-9.8-9.8-9.8s-9.8 4.4-9.8 9.8H12.7c0-5.4-4.4-9.7-9.7-9.7v-11.7c5.4 0 9.8-4.4 9.8-9.8S8.4 212 3 212v-11.7c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.8-9.8-9.8V169c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.8-9.8-9.8v-11.7c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.8-9.8-9.8v-11.7c5.4-.3 9.5-4.9 9.2-10.3C11.9 91.2 8 87.3 3 87V75.3c5.4 0 9.8-4.4 9.8-9.8S8.4 55.7 3 55.7V44c5.4 0 9.8-4.4 9.8-9.8S8.4 24.4 3 24.4V12.7c5.4 0 9.7-4.4 9.7-9.7h11.7c0 5.4 4.4 9.8 9.8 9.8S44 8.4 44 3h11.7c0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8H87c0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8h11.7c0 5.4 4.4 9.8 9.8 9.8s9.8-4.4 9.8-9.8h11.7c.4 5.4 5.1 9.4 10.5 9 4.8-.4 8.6-4.2 9-9h11.7c-.2 5.4 4.1 9.9 9.5 10.1 5.4.2 9.9-4.1 10.1-9.5V3H212c-.2 5.4 4.1 9.9 9.5 10.1 5.4.2 9.9-4.1 10.1-9.5V3h11.7c0 5.4 4.4 9.7 9.7 9.7v11.7c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.8 9.8 9.8v11.7c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.8 9.8 9.8V87c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.8 9.8 9.8v11.7c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.8 9.8 9.8v11.7c-5.4.4-9.4 5.1-9 10.5.4 4.8 4.2 8.6 9 9v11.7c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.8 9.8 9.8V212c-5.4 0-9.8 4.4-9.8 9.8s4.4 9.7 9.8 9.8z' fill='%23f0f0f0'/%3E%3Cpath d='M246.2 256h-17.6v-3c.3-3.8-2.5-7-6.3-7.3s-7 2.5-7.3 6.3v4h-17.7v-3c0-3.8-3.1-6.8-6.8-6.8-3.8 0-6.8 3-6.8 6.8v3h-17.6v-3c0-3.8-3-6.8-6.8-6.8s-6.8 3-6.8 6.8v3h-17.6v-3c0-3.8-3-6.8-6.8-6.8s-6.8 3-6.8 6.8v3h-17.6v-3c0-3.8-3-6.8-6.8-6.8s-6.8 3-6.8 6.8v3H72.3v-3c0-3.8-3.1-6.8-6.8-6.8-3.8 0-6.8 3-6.8 6.8v3H41v-3c0-3.8-3.1-6.8-6.8-6.8-3.8 0-6.8 3-6.8 6.8v3H9.8v-3c0-3.7-3-6.7-6.8-6.8H0v-17.6h3c3.8.3 7-2.5 7.3-6.3.3-3.8-2.5-7-6.3-7.3H0v-17.7h3c3.8 0 6.8-3 6.8-6.8s-3-6.8-6.8-6.8H0v-17.6h3c3.8 0 6.8-3 6.8-6.8s-3-6.8-6.8-6.8H0v-17.6h3c3.8 0 6.8-3 6.8-6.8s-3-6.8-6.8-6.8H0v-17.6h3c3.8 0 6.8-3 6.8-6.8s-3-6.8-6.8-6.8H0V72.3h3c3.8.1 6.9-2.8 7.1-6.5.1-3.8-2.8-6.9-6.5-7.1H0V41h3c3.8.3 7-2.5 7.3-6.3.3-3.8-2.5-7-6.3-7.3H0V9.8h3c3.7 0 6.7-3 6.8-6.8V0h17.6v3c.2 3.8 3.5 6.6 7.2 6.3 3.5-.2 6.2-2.9 6.4-6.3V0h17.7v3c0 3.8 3 6.8 6.8 6.8s6.8-3 6.8-6.8V0h17.6v3c0 3.8 3 6.8 6.8 6.8s6.8-3 6.8-6.8V0h17.6v3c0 3.8 3.1 6.8 6.8 6.8 3.8 0 6.8-3 6.8-6.8V0h17.6v3c0 3.8 3.1 6.8 6.8 6.8 3.8 0 6.8-3 6.8-6.8V0h17.6v3c0 3.8 3 6.8 6.8 6.8s6.8-3 6.8-6.8V0H215v3c-.1 3.8 2.8 6.9 6.5 7.1s6.9-2.8 7.1-6.5V0h17.6v3c0 3.7 3 6.7 6.7 6.8h3v17.6h-3c-3.8-.3-7 2.5-7.3 6.3s2.5 7 6.3 7.3h4v17.7h-3c-3.8-.1-6.9 2.8-7.1 6.5-.1 3.8 2.8 6.9 6.5 7.1h3.5v17.6h-3c-3.8 0-6.8 3-6.8 6.8s3 6.8 6.8 6.8h3v17.6h-3c-3.8 0-6.8 3-6.8 6.8s3 6.8 6.8 6.8h3v17.6h-3c-3.8 0-6.8 3-6.8 6.8s3 6.8 6.8 6.8h3v17.6h-3c-3.8 0-6.8 3.1-6.8 6.8 0 3.8 3 6.8 6.8 6.8h3V215h-3c-3.8-.1-6.9 2.8-7.1 6.5s2.8 6.9 6.5 7.1h3.5v17.6h-3c-3.8 0-6.8 3-6.8 6.8l.3 3zm-13.7-4h9.8c.5-5.2 4.6-9.2 9.7-9.7v-9.8c-5.9-.6-10.3-5.8-9.7-11.8.5-5.1 4.6-9.2 9.7-9.7v-9.8c-5.9-.6-10.3-5.8-9.7-11.8.5-5.1 4.6-9.2 9.7-9.7V170c-5.9-.6-10.3-5.8-9.7-11.8.5-5.1 4.6-9.2 9.7-9.7v-9.8c-5.9-.6-10.3-5.8-9.7-11.8.5-5.1 4.6-9.2 9.7-9.7v-9.8c-5.9-.5-10.3-5.7-9.8-11.7.4-5.2 4.6-9.4 9.8-9.8v-9.8c-5.9-.6-10.3-5.8-9.7-11.8.5-5.1 4.6-9.2 9.7-9.7V45c-5.9-.6-10.3-5.8-9.7-11.8.5-5.1 4.6-9.2 9.7-9.7v-9.8c-5.1-.5-9.2-4.6-9.7-9.7h-9.8c-.4 5.9-5.6 10.4-11.6 9.9-5.3-.4-9.5-4.6-9.9-9.9h-9.8c-.6 5.9-5.8 10.3-11.8 9.7-5.1-.5-9.2-4.6-9.7-9.7H170c-.6 5.9-5.8 10.3-11.8 9.7-5.1-.5-9.2-4.6-9.7-9.7h-9.8c-.6 5.9-5.8 10.3-11.8 9.7-5.1-.5-9.2-4.6-9.7-9.7h-9.8c-.5 5.9-5.7 10.3-11.7 9.8-5.1-.4-9.2-4.6-9.7-9.8h-9.8c-.6 5.9-5.9 10.2-11.8 9.6-5.1-.5-9.1-4.5-9.6-9.6H45c-.4 5.9-5.5 10.4-11.5 10-5.4-.4-9.7-4.6-10-10h-9.8c-.5 5.1-4.6 9.2-9.7 9.7v9.8c5.9.4 10.4 5.5 10 11.5-.4 5.4-4.6 9.7-10 10v9.8c5.9.7 10.1 6.1 9.4 12-.6 4.9-4.5 8.8-9.4 9.4V86c5.9.6 10.3 5.8 9.7 11.8-.5 5.1-4.6 9.2-9.7 9.7v9.8c5.9.6 10.3 5.8 9.7 11.8-.5 5.1-4.6 9.2-9.7 9.7v9.8c5.9.5 10.3 5.7 9.8 11.7-.5 5.2-4.6 9.4-9.8 9.8v9.8c5.9.6 10.3 5.8 9.7 11.8-.5 5.1-4.6 9.2-9.7 9.7v9.8c5.9.6 10.3 5.8 9.7 11.8-.5 5.1-4.6 9.2-9.7 9.7v9.8c5.1.5 9.2 4.6 9.7 9.7h9.8c.4-5.9 5.5-10.4 11.5-10 5.4.4 9.7 4.6 10 10h9.8c.6-5.9 5.8-10.3 11.8-9.7 5.1.5 9.2 4.6 9.7 9.7H86c.6-5.9 5.8-10.3 11.8-9.7 5.1.5 9.2 4.6 9.7 9.7h9.8c.6-5.9 5.8-10.3 11.8-9.7 5.1.5 9.2 4.6 9.7 9.7h9.8c.5-5.9 5.7-10.3 11.7-9.8 5.2.5 9.4 4.6 9.8 9.8h9.8c.6-5.9 5.8-10.3 11.8-9.7 5.1.5 9.2 4.6 9.7 9.7h9.7c.6-5.9 5.8-10.3 11.8-9.7 5 .3 9.1 4.4 9.6 9.5z' fill='%23ccc'/%3E%3Cpath class='st2' d='M244.1 254h-13.5l-.2-1.8c-.4-4.8-4.7-8.4-9.5-7.9-4.2.4-7.6 3.7-7.9 7.9l-.2 1.8h-13.5l-.2-1.8c-.4-4.8-4.7-8.4-9.5-7.9-4.2.4-7.6 3.7-7.9 7.9l-.2 1.8H168l-.2-1.8c-.4-4.8-4.7-8.4-9.5-7.9-4.2.4-7.6 3.7-7.9 7.9l-.2 1.8h-13.5l-.2-1.8c-.4-4.8-4.6-8.4-9.5-8-4.3.4-7.7 3.7-8 8l-.2 1.8h-13.5l-.2-1.8c-.4-4.8-4.6-8.4-9.5-8-4.3.4-7.7 3.7-8 8l-.2 1.8h-13l-.2-1.8c-.4-4.2-3.7-7.6-7.9-8-4.8-.4-9.1 3.2-9.5 8l-.2 1.8H43.1l-.2-1.8c-.4-4.8-4.7-8.4-9.5-7.9-4.2.4-7.6 3.7-7.9 7.9l-.2 1.8H11.9l-.2-1.8c-.4-4.2-3.7-7.5-7.9-7.9l-1.8-.2v-13.5l1.8-.2c4.8-.5 8.4-4.7 7.9-9.6-.4-4.2-3.7-7.5-7.9-7.9H2v-13.5l1.8-.2c4.8-.5 8.4-4.7 7.9-9.6-.4-4.2-3.7-7.5-7.9-7.9l-1.8-.1v-13.5l1.8-.1c4.2-.4 7.6-3.8 7.9-8 .2-2.3-.5-4.6-2-6.4-1.5-1.8-3.6-2.9-5.9-3.1l-1.8-.1v-13.5l1.8-.2c4.8-.5 8.4-4.7 7.9-9.6-.4-4.2-3.7-7.5-7.9-7.9l-1.8-.1v-13.5l1.8-.2c4.8-.4 8.4-4.7 7.9-9.5-.4-4.2-3.7-7.6-8-7.9L2 87.8V74.4l1.8-.2c4.8-.5 8.4-4.7 7.9-9.6-.4-4.2-3.7-7.5-7.9-7.9L2 56.6V43.1l1.8-.1c4.2-.4 7.6-3.8 7.9-8 .2-2.3-.5-4.6-2-6.4-1.5-1.8-3.6-2.9-5.9-3.1L2 25.3V11.9l1.8-.2c4.2-.4 7.6-3.7 7.9-7.9l.2-1.8h13.5l.2 1.8c.3 4.2 3.7 7.6 7.9 8 4.8.4 9.1-3.2 9.5-8l.1-1.8h13.5l.2 1.8c.4 4.3 3.7 7.6 8 8 4.8.4 9.1-3.2 9.5-8l.1-1.8h13.5l.1 1.8c.4 4.2 3.7 7.6 7.9 8 4.8.4 9.1-3.2 9.5-8l.2-1.8h13.5l.2 1.8c.4 4.2 3.7 7.6 7.9 8 4.8.4 9.1-3.2 9.5-8l.2-1.8h13.5l.2 1.8c.4 4.2 3.7 7.6 7.9 8 4.8.4 9.1-3.2 9.5-8l.2-1.8h13.5l.2 1.8c.4 4.8 4.7 8.4 9.5 7.9 4.2-.4 7.6-3.7 7.9-7.9l.2-1.8H213l.2 1.8c.4 4.2 3.7 7.6 7.9 8 4.8.4 9.1-3.2 9.5-8l.2-1.8h13.5l.2 1.8c.4 4.2 3.7 7.5 7.9 7.9l1.8.2v13.4l-1.8.2c-4.8.4-8.4 4.7-7.9 9.5.4 4.2 3.7 7.6 7.9 7.9l1.8.2v13.5l-1.8.2c-4.8.4-8.4 4.6-8 9.5.4 4.3 3.7 7.7 8 8l1.8.2V88l-1.8.2c-4.2.4-7.6 3.7-8 7.9-.4 4.8 3.2 9.1 8 9.5l1.8.2v13.5l-1.8.2c-4.8.4-8.4 4.6-8 9.5.4 4.3 3.7 7.7 8 8l1.8.2v13.5l-1.8.2c-4.8.4-8.4 4.6-8 9.5.4 4.3 3.7 7.7 8 8l1.8.2v13.5l-1.8.2c-4.8.4-8.4 4.6-8 9.5.4 4.3 3.7 7.7 8 8l1.8.2v13.5l-1.8.2c-4.8.4-8.4 4.6-8 9.5.4 4.3 3.7 7.7 8 8l1.8.2v13.5l-1.8.2c-4.2.4-7.5 3.7-7.9 7.9l-.4 1zm-10-4h6.5c1.1-4.7 4.8-8.3 9.4-9.4v-6.5c-6.8-1.6-11.1-8.5-9.4-15.3 1.1-4.7 4.8-8.3 9.4-9.4V203c-6.8-1.6-11.1-8.5-9.4-15.3 1.1-4.7 4.8-8.3 9.4-9.4v-6.5c-6.8-1.6-11.1-8.5-9.4-15.3 1.1-4.7 4.8-8.3 9.4-9.4v-6.5c-6.8-1.6-11.1-8.5-9.4-15.4 1.1-4.7 4.8-8.3 9.4-9.4v-6.5c-6.8-1.6-11.1-8.5-9.4-15.4 1.1-4.7 4.8-8.3 9.4-9.4V78c-6.8-1.6-11.1-8.5-9.4-15.4 1.1-4.7 4.8-8.3 9.4-9.4v-6.5c-6.8-1.6-11.1-8.5-9.4-15.3 1.1-4.7 4.8-8.3 9.4-9.4v-6.5c-4.7-1.1-8.3-4.8-9.4-9.4h-6.5c-1.5 6.1-7.2 10.3-13.5 9.7-5.5-.5-10-4.4-11.3-9.7h-6.5c-1.5 6.1-7.2 10.3-13.5 9.7-5.5-.5-10-4.4-11.3-9.7h-6.5c-1.6 6.8-8.5 11.1-15.3 9.4-4.7-1.1-8.3-4.8-9.4-9.4h-6.5c-1.6 6.8-8.5 11.1-15.3 9.5-4.7-1.1-8.4-4.8-9.5-9.5H109c-.6 2.7-2.1 5.1-4.2 6.8-5.4 4.5-13.4 3.8-17.9-1.6-1.3-1.5-2.2-3.3-2.6-5.2h-6.5c-1.4 6.2-7.2 10.3-13.5 9.7-5.5-.5-10-4.4-11.2-9.7h-6.5c-1.4 6.2-7.2 10.3-13.5 9.7-5.5-.5-10-4.4-11.3-9.7h-6.5c-1.1 4.7-4.8 8.3-9.4 9.4V22c6.2 1.5 10.3 7.2 9.7 13.5-.5 5.5-4.4 10-9.7 11.3v6.5c6.1 1.5 10.3 7.2 9.7 13.5-.5 5.5-4.4 10-9.7 11.3v6.5c6.8 1.6 11.1 8.5 9.5 15.3-1.1 4.7-4.8 8.4-9.5 9.5v6.5c2.7.6 5.1 2.1 6.8 4.2 2.2 2.6 3.2 5.9 2.9 9.3-.5 5.5-4.4 10-9.7 11.3v6.5c2.7.6 5.1 2.1 6.8 4.2 2.2 2.6 3.2 5.9 2.9 9.3-.5 5.5-4.4 10-9.7 11.2v6.5c6.1 1.5 10.3 7.2 9.7 13.5-.5 5.5-4.4 10-9.7 11.2v6.5c6.1 1.5 10.3 7.2 9.7 13.5-.5 5.5-4.4 10-9.7 11.2v6.5c4.7 1.1 8.3 4.8 9.4 9.4h6.5c1.6-6.8 8.5-11.1 15.3-9.5 4.7 1.1 8.4 4.8 9.5 9.5h6.5c1.6-6.8 8.5-11.1 15.3-9.4 4.7 1.1 8.3 4.8 9.4 9.4h6.5c1.6-6.8 8.5-11.1 15.3-9.4 4.7 1.1 8.3 4.8 9.4 9.4h6.5c1.6-6.8 8.5-11.1 15.3-9.4 4.7 1.1 8.3 4.8 9.4 9.4h6.5c.6-2.7 2.1-5.1 4.2-6.8 5.4-4.5 13.4-3.8 17.9 1.6 1.3 1.5 2.2 3.3 2.6 5.2h6.5c1.6-6.8 8.5-11.1 15.3-9.4 4.7 1.1 8.3 4.8 9.4 9.4h6.5c1.6-6.8 8.5-11.1 15.3-9.4 5 1 8.6 4.6 9.7 9.2z'/%3E%3Cpath d='M38.1 34.2h179.7c2.2 0 3.9 1.8 3.9 3.9v179.7c0 2.2-1.8 3.9-3.9 3.9H38.1c-2.2 0-3.9-1.8-3.9-3.9V38.1c0-2.1 1.8-3.9 3.9-3.9z' fill='%23fedd00'/%3E%3Cpath d='M216.9 222.8H39.1c-3.3 0-5.9-2.6-5.9-5.9V39.1c0-3.3 2.6-5.9 5.9-5.9h177.8c3.3 0 5.9 2.6 5.9 5.9v177.8c0 3.2-2.7 5.9-5.9 5.9zM39.1 37.2c-1.1 0-1.9.9-1.9 1.9v177.8c0 1.1.9 1.9 1.9 1.9h177.8c1.1 0 1.9-.9 1.9-1.9V39.1c0-1.1-.9-1.9-1.9-1.9H39.1z' fill='%23d9b500'/%3E%3Cpath class='st2' d='M218.9 224.7H37.2c-3.3 0-5.9-2.6-5.9-5.9V37.2c0-3.3 2.6-5.9 5.9-5.9h181.7c3.3 0 5.9 2.6 5.9 5.9v181.7c-.1 3.2-2.7 5.8-5.9 5.8zM37.2 35.2c-1.1 0-1.9.9-1.9 1.9v181.7c0 1.1.9 1.9 1.9 1.9h181.7c1.1 0 1.9-.9 1.9-1.9V37.2c0-1.1-.9-1.9-1.9-1.9l-181.7-.1z'/%3E%3Cpath d='M101.2 171.1V85.6H87V71.3h50.6c31.6 0 38.1 20.8 38.1 35.3 0 11.6-4.7 20.5-9.6 25.4-7.9 7.9-18.6 9.7-35 9.7h-12.8v29.4h15v14.3H87v-14.3h14.2zm17.2-43.1h14.3c21 0 25.5-9.7 25.5-21.5 0-13.4-7.6-20.8-20.2-20.8h-19.6V128z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-sendgrid-icon {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 147 33' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:%23212f38%7D.st1%7Bfill:%239dd6e3%7D.st2%7Bfill:%233f72ab%7D.st3%7Bfill:%2300a9d1%7D%3C/style%3E%3Cg id='Active'%3E%3Cg id='Products-Hover' transform='translate(-80 -37)'%3E%3Cg id='Navigation-Bar'%3E%3Cg id='SG-Twilio-Logo' transform='translate(80 37)'%3E%3Cpath id='Fill-1' class='st0' d='M50.8 22.8c.6-1.4 1.9-2.3 3.6-2.3 1.7 0 2.9.8 3.5 2.3h-7.1zm11 1.8c0-4.2-3.1-7.5-7.5-7.5-4.2 0-7.6 3.4-7.6 7.6 0 4.2 3.1 7.6 7.7 7.6 3.1 0 5.4-1.5 6.7-3.7l-3.1-2c-.7 1.3-2 2.1-3.5 2.1-2.1 0-3.4-1-3.9-2.6h11.2v-1.5zm81.1 0c0-2.2-1.6-3.9-3.7-3.9-2.2 0-3.9 1.7-3.9 3.9s1.7 3.9 3.9 3.9c2.1 0 3.7-1.8 3.7-3.9zm-11.5 0c0-5.1 3.8-7.6 7.1-7.6 1.9 0 3.4.7 4.3 1.7v-8.1h4v21.2h-4v-1.6c-1 1.1-2.5 1.9-4.4 1.9-3.1 0-7-2.4-7-7.5zm-2.9-9.5c1.3 0 2.4-1.1 2.4-2.4s-1.1-2.4-2.4-2.4c-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4zm-2 2.2h4v14.5h-4V21.2h-1.4l1.4-3.9zm-10.6 0h4v2.4c.7-1.5 2-2.4 4-2.4h1.6l-1.4 3.9H123c-2.1 0-3.1 1.1-3.1 3.8v6.9h-4V17.3zm-22.4 3.9c0-6 4.6-10.9 10.8-10.9 3.1 0 5.8 1.1 7.7 2.9.8.7 1.4 1.6 2 2.5l-3.5 2.2c-1.3-2.4-3.3-3.7-6.1-3.7-3.9 0-6.9 3.2-6.9 7 0 3.9 2.9 7 7 7 3.1 0 5.3-1.7 6-4.4h-6.7v-3.9h11v1.6c0 5.7-4.1 10.6-10.4 10.6-6.5 0-10.9-5-10.9-10.9zm-4.8 3.4c0-2.2-1.6-3.9-3.7-3.9-2.2 0-3.9 1.7-3.9 3.9s1.7 3.9 3.9 3.9c2.1 0 3.7-1.8 3.7-3.9zm-11.5 0c0-5.1 3.8-7.6 7.1-7.6 1.9 0 3.4.7 4.3 1.7v-8.1h4v21.2h-4v-1.6c-1 1.1-2.5 1.9-4.4 1.9-3.1 0-7-2.4-7-7.5zm-14.4-7.3h4v1.6c.9-1.2 2.4-1.9 4-1.9 3.4 0 5.5 2.2 5.5 6v8.9h-4v-8.3c0-1.9-.9-3.1-2.7-3.1-1.5 0-2.8 1-2.8 3.5v7.9h-4V17.3zm-32.5 11l3.7-2.9c1 1.8 2.7 2.8 4.6 2.8 2.1 0 3.2-1.3 3.2-2.8 0-1.7-2.1-2.3-4.4-3-2.8-.9-6-2-6-6 0-3.4 3-6.1 7.1-6.1 3.5 0 5.4 1.3 7.2 3.1l-3.3 2.5c-.9-1.3-2.1-2-3.8-2-1.9 0-2.9 1-2.9 2.4 0 1.6 2 2.2 4.3 2.9 2.9.9 6.1 2.2 6.1 6.3 0 3.4-2.7 6.6-7.4 6.6-4 0-6.5-1.6-8.4-3.8z'/%3E%3Cpath id='Fill-2' class='st1' d='M8.5 31.8H17v-8.4H8.5z'/%3E%3Cpath id='Fill-3' class='st1' d='M0 23.4h8.5v-8.5H0z'/%3E%3Cpath id='Fill-4' class='st2' d='M0 31.8h8.5v-8.4H0z'/%3E%3Cpath id='Fill-5' class='st3' d='M17 23.4h8.5v-8.5H17z'/%3E%3Cpath id='Fill-6' class='st3' d='M8.5 14.9H17V6.4H8.5z'/%3E%3Cpath id='Fill-7' fill='%232191c4' d='M8.5 23.4H17v-8.5H8.5z'/%3E%3Cpath id='Fill-8' class='st2' d='M17 14.9h8.5V6.4H17z'/%3E%3Cpath id='Fill-9' class='st0' d='M34.3 1.3v4.9h-1.2V1.3h-1.7v-1H36v1h-1.7'/%3E%3Cpath id='Fill-10' class='st0' d='M44.4 6.2h-1.1L42 1.9l-1.3 4.3h-1.1l-1.7-6 1.2.1 1.1 4.2L41.5.3h1.1l1.3 4.2 1-4.2h1.2l-1.7 5.9'/%3E%3Cpath id='Fill-11' class='st0' d='M48.3 6.2h1.2V.3h-1.2z'/%3E%3Cpath id='Fill-12' class='st0' d='M52.1 6.2V.3h1.2v4.9h2v1h-3.2'/%3E%3Cpath id='Fill-13' class='st0' d='M57.6 6.2h1.2V.3h-1.2z'/%3E%3Cpath id='Fill-14' class='st0' d='M64 1.1c-1 0-1.6.8-1.6 2.1S63 5.4 64 5.4s1.6-.8 1.6-2.1S65 1.1 64 1.1m0 5.2c-1.7 0-2.8-1.2-2.8-3.1 0-1.8 1.1-3.1 2.8-3.1 1.7 0 2.8 1.2 2.8 3.1 0 1.9-1.1 3.1-2.8 3.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-sendinblue-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 713 103'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23091E3F' fill-rule='nonzero' d='M150.339 32.882c-7.245 0-11.886 2.385-11.886 6.638s4.875 6.121 12.12 6.876c10.3.875 23.655 2.624 23.655 16.576 0 9.937-9.399 17.012-23.772 17.012-9.066 0-17.78-1.987-25.456-9.937l6.11-7.95c5.129 5.128 12.05 7.986 19.248 7.95 6.227 0 12.337-1.868 12.337-6.876 0-5.009-4.759-6.658-13.022-7.414-10.418-.874-22.754-3.975-22.754-15.9 0-11.924 12.806-16.356 23.204-16.356a34.299 34.299 0 0121.54 7.075l-6.11 7.096a24.577 24.577 0 00-15.214-4.79zm62.485 36.648c5.875 0 12.689-1.987 16.194-5.783l7.598 7.075c-5.777 6.221-15.411 9.162-24.007 9.162-18.348 0-30.117-11.01-30.117-28.241 0-16.357 12.219-28.242 29.882-28.242 16.429 0 27.747 9.262 27.747 27.824 0 1.51-.118 3.16-.235 4.79h-45.234c.98 8.387 7.833 13.415 18.172 13.415zm-.45-35.992c-8.48 0-15.842 4.471-17.624 13.196h33.857c-.666-8.625-6.54-13.196-16.233-13.196zm81.753 14.925c0-9.261-5.443-14.607-15.058-14.607a15.415 15.415 0 00-11.283 4.774 15.892 15.892 0 00-4.382 11.582v28.48h-11.75v-53.88h10.653l.685 7.513c4.655-5.63 11.538-8.864 18.78-8.824 13.472 0 24.006 8.07 24.006 24.863v30.329H294.03l.098-30.23zm82.87 30.23h-10.985l-.686-8.527c-4.379 6.405-11.67 10.106-19.346 9.818-16.194 0-28.53-10.354-28.53-28.241 0-18.325 12.1-28.242 28.295-28.242 6.795 0 15.959 3.16 19.581 9.6V2.453h11.75l-.079 76.239zM329.1 51.743c0 10.91 7.696 17.787 17.624 17.787 9.647 0 17.467-7.937 17.467-17.728 0-9.79-7.82-17.728-17.467-17.728-9.928 0-17.624 6.758-17.624 17.669zm69.633-50.72a6.637 6.637 0 015.123 1.81 6.846 6.846 0 012.122 5.066c-.28 3.852-3.44 6.833-7.245 6.833-3.806 0-6.966-2.98-7.245-6.833a6.846 6.846 0 012.122-5.066 6.637 6.637 0 015.123-1.81zm5.777 77.67h-11.75v-53.88h11.75v53.88zm58.177-30.23c0-9.261-5.424-14.607-15.059-14.607a15.395 15.395 0 00-11.289 4.768 15.872 15.872 0 00-4.376 11.588v28.48h-11.749v-53.88h10.633l.685 7.513c4.663-5.63 11.552-8.865 18.799-8.824 13.472 0 24.007 8.07 24.007 24.863v30.329h-11.75l.099-30.23zm38.38-14.826c3.623-6.44 12.806-10.136 19.582-10.136 16.076 0 28.315 9.937 28.315 28.242 0 17.887-13.14 28.241-28.413 28.241-7.03 0-15.059-2.941-19.484-9.818l-.666 8.527h-10.985V2.453h11.749l-.098 31.184zm.685 18.106a17.664 17.664 0 005.18 12.787 17.133 17.133 0 0012.698 5c10.203 0 17.624-6.876 17.624-17.787 0-10.911-7.46-17.669-17.624-17.669a17.151 17.151 0 00-12.65 4.966 17.68 17.68 0 00-5.228 12.703zm71.767 26.95H561.77V2.453h11.75v76.24zm27.062-24.545c0 9.162 5.327 15.482 15.176 15.482a15.24 15.24 0 0011.2-4.742 15.713 15.713 0 004.309-11.516v-28.56h11.651v53.88h-10.515l-.686-7.432c-4.753 5.757-11.852 8.975-19.249 8.724-13.707 0-23.498-9.48-23.498-25.737V24.813h11.651l-.039 29.335zm85.142 15.382c5.874 0 12.669-1.987 16.194-5.783l7.578 7.075c-5.777 6.221-15.391 9.162-24.007 9.162-18.329 0-30.117-11.01-30.117-28.241 0-16.357 12.239-28.242 29.901-28.242 16.41 0 27.728 9.262 27.728 27.824 0 1.51-.117 3.16-.215 4.79h-45.293c1.038 8.387 7.93 13.415 18.23 13.415zm-.45-35.992c-8.5 0-15.862 4.471-17.624 13.196h33.837c-.705-8.625-6.6-13.196-16.214-13.196z'/%3E%3Cpath fill='%230092FF' d='M85.213 73.712a20.181 20.181 0 01-11.867 9.307 27.21 27.21 0 001.086-7.565c0-12.75-8.787-23.444-20.582-26.356a19.938 19.938 0 018.767-5.001 19.865 19.865 0 0115.243 2.018c9.593 5.571 12.891 17.95 7.353 27.597M47.421 95.655c-5.247 0-10.238-2.096-13.941-5.675a26.782 26.782 0 007.05-2.842c10.976-6.373 15.791-19.367 12.408-31.093 8.399 2.42 14.571 10.196 14.571 19.409 0 11.137-9.013 20.201-20.088 20.201M9.627 73.712c-2.623-4.57-3.302-9.954-2.076-14.962a27.2 27.2 0 005.967 4.704 26.74 26.74 0 0013.462 3.634 27.036 27.036 0 0019.522-8.356c2.107 8.52-1.505 17.771-9.433 22.375a19.882 19.882 0 01-10.01 2.702A20.084 20.084 0 019.626 73.712m0-43.886a20.181 20.181 0 0111.868-9.307 27.159 27.159 0 00-1.088 7.567c0 12.743 8.783 23.434 20.572 26.351-6.284 6.106-16.066 7.592-23.998 2.986-4.648-2.7-7.971-7.055-9.36-12.268a20.169 20.169 0 012.006-15.329M47.421 7.883c5.249 0 10.235 2.094 13.935 5.67A27.035 27.035 0 0054.31 16.4c-6.25 3.63-10.72 9.487-12.586 16.497a27.106 27.106 0 00.17 14.595c-8.395-2.422-14.562-10.197-14.562-19.406 0-11.14 9.011-20.203 20.089-20.203m37.792 21.943c2.626 4.576 3.306 9.966 2.072 14.98a26.999 26.999 0 00-5.962-4.722c-6.25-3.627-13.529-4.591-20.5-2.713a26.8 26.8 0 00-12.492 7.454 20.2 20.2 0 01.082-10.126c1.387-5.212 4.711-9.569 9.359-12.268 4.647-2.697 10.06-3.414 15.243-2.018 5.183 1.397 9.514 4.74 12.198 9.413m5.997-3.48c-3.608-6.285-9.433-10.78-16.404-12.658a27.128 27.128 0 00-5.035-.852C64.771 5.442 56.378.92 47.421.92c-9.277 0-17.474 4.729-22.34 11.913-8.873.656-16.97 5.706-21.45 13.511C.021 32.628-.936 39.95.93 46.96a27.532 27.532 0 001.785 4.81c-3.867 8.053-3.565 17.623.914 25.425 4.638 8.078 12.806 12.847 21.424 13.495 5 7.4 13.41 11.93 22.367 11.93 9.276 0 17.473-4.73 22.338-11.915a27.104 27.104 0 0021.451-13.51c4.639-8.08 4.663-17.583.909-25.412 3.872-8.057 3.572-17.631-.909-25.437'/%3E%3C/g%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-sendpulse-icon {
+  background-image: url("data:image/svg+xml,%3Csvg id='sendpulse' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 37.84'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23199fbf%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M234.4 109.08h4.93q1.17 10 2.38 20h5.28a4.88 4.88 0 016.79-1.76 4.8 4.8 0 01.7 7.54 4.85 4.85 0 01-7.51-1.22h-9.64c-.44-3.36-1-6.72-1.41-10.08-2.11 7.74-4.13 15.54-6.17 23.31H225c-1.14-4.71-2.23-9.44-3.36-14.15h-6.37v-4.54h10.48c.57 2.5 1.17 5 1.75 7.47 2.33-8.83 4.58-17.65 6.9-26.57zM92.73 110.9h5.88v31.9h-5.8v-.88c-2.61 1.43-5.69 1.43-8.58 1.24-2.13-.2-4.51-.73-5.87-2.54a8.74 8.74 0 01-1.36-5.19V125.3a6.38 6.38 0 012.42-5.22 10.54 10.54 0 015.07-1.53 17.74 17.74 0 018.3 1c-.1-2.89 0-5.79 0-8.68m-9 12.57a1.26 1.26 0 00-.89 1.4v11.18a2.4 2.4 0 00.58 1.76 5.94 5.94 0 003 .75 14.19 14.19 0 004.94-.48 1.87 1.87 0 001.37-1.72v-11.16c.09-1-1-1.52-1.83-1.72a18.6 18.6 0 00-7.24.03zM155.83 110.88h5.88v31.91h-5.88c0-10.64-.02-21.27 0-31.91zM7.62 111.22a53.68 53.68 0 0113.16.32v5.2c-4.09-.61-8.26-1.32-12.38-.67-1 .13-2.14.63-2.27 1.76a44.61 44.61 0 000 4.48c0 1.06 1.12 1.48 2 1.58 3.59.4 7.41-.47 10.82 1 2.29 1 3.18 3.67 3.27 6 .07 3 .31 6.39-1.57 9-1.9 2.4-5.17 3-8.06 3.25a59 59 0 01-12-.8v-5.61a42.79 42.79 0 0011.65 1.31 7.34 7.34 0 003.38-.92c.77-.93.46-2.24.53-3.34-.09-1.32.27-2.81-.53-4-1.44-1-3.32-.68-5-.75-2.87 0-6.14.15-8.45-1.87-2-1.79-2.29-4.64-2.19-7.16-.09-2.12.05-4.49 1.58-6.14 1.49-1.74 3.87-2.32 6.06-2.64zM104.09 111.4c4.35 0 8.71-.06 13.08.06 2.49.2 5.34.49 7.07 2.54a6.54 6.54 0 011.43 4v7a6.33 6.33 0 01-3.44 5.6c-3.69 1.87-8 1.61-12 1.61v10.59h-6.16v-31.4m6.11 4.6v11.53c2.69-.18 5.61.48 8.07-.89a2.52 2.52 0 001.3-2.41v-5.78a2 2 0 00-1.49-2c-2.52-.75-5.23-.35-7.86-.45zM29.22 120.43c2.27-1.7 5.24-2 8-2 2.55 0 5.3.29 7.41 1.87 1.78 1.34 2.42 3.66 2.5 5.8s0 4.42 0 6.63H32.56c.06 1.73-.51 4.29 1.57 5.07 3.94 1.39 8.23.27 12.15-.72v5.05a34.64 34.64 0 01-11.65.93c-2.27-.28-4.67-1-6.27-2.69a6.93 6.93 0 01-1.72-5v-9a7.66 7.66 0 012.57-6m4.59 3c-1.93.71-1 3.2-1.24 4.77h8.71c-.2-1.54.6-3.76-1-4.72a11.38 11.38 0 00-6.44-.06zM57.75 119.71c2.42-1.28 5.26-1.36 7.93-1.19 1.94.18 4.12.64 5.34 2.31a8.28 8.28 0 011.43 5.34v16.62h-5.87v-17.34a2 2 0 00-1.58-2 14.17 14.17 0 00-5.8.15 1.9 1.9 0 00-1.41 2v17.25h-5.87v-23.93h5.9c-.02.2-.05.59-.07.79zM170.28 119.4c4.57-1.58 9.47-.74 14.18-.52v4.9a35 35 0 00-10.36-.65c-.93.06-2.09.59-1.91 1.71.11 1-.44 2.41.73 2.85 2.26.71 4.67.09 7 .47 1.92.27 4 1.12 4.92 2.94.94 1.61.68 3.54.71 5.32a6 6 0 01-2.67 5.2c-2.63 1.53-5.79 1.67-8.75 1.6a52.82 52.82 0 01-7.33-.66v-5c3.95.49 8 1.61 12 .63 1.3-.29 1-1.81 1-2.78s0-2.14-1.09-2.31c-3.33-.59-7.18.5-10.08-1.75-2.17-1.53-2.39-4.38-2.23-6.8a5.42 5.42 0 013.88-5.15zM190.81 122.09c1.46-2.54 4.56-3.34 7.28-3.54 3-.2 6.35-.19 9.08 1.42 2 1.18 2.86 3.61 3 5.84s0 4.63 0 6.94h-14.55c0 1.76-.47 4.33 1.65 5.11 3.94 1.33 8.18.23 12.07-.76v5a32.62 32.62 0 01-12.78.77c-2.37-.42-4.87-1.54-6-3.78-1.27-2.42-.69-5.24-.82-7.85.12-3.07-.5-6.41 1.13-9.19m5.47 1.6c-1.16 1.19-.53 3-.65 4.52h8.68a15.92 15.92 0 00-.21-3.91c-.52-1-1.81-1.11-2.81-1.23a9.77 9.77 0 00-5 .63zM130.31 118.92h5.88v17.14a2 2 0 001.13 2.1 14.41 14.41 0 005.74.13c.84-.13 1.92-.53 1.9-1.55v-17.83h5.87v23.87H145V142c-2.33 1.29-5.07 1.33-7.67 1.21a8.18 8.18 0 01-5.06-1.74 7.24 7.24 0 01-1.95-5.34c-.01-5.76 0-11.49-.01-17.21z' transform='translate(0 -109.08)'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-smtp-icon {
+  background-image: url("data:image/svg+xml,%3Csvg height='512' width='512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M507.601 209.464l-63.185-63.187V15c0-8.284-6.716-15-15-15H82.581c-8.284 0-15 6.716-15 15v131.277C-1.511 215.371.003 211.786.003 220.07V497c0 8.284 6.716 15 15 15h481.992c8.284 0 15-6.716 15-15 0-2.012.034-277.104-.062-278.217a15.067 15.067 0 00-4.332-9.319zm-33.786 8.639l-29.399 20.816v-50.216zM414.416 30v230.159L310.51 333.728c-29.799 21.097-70.162 21.566-100.396 1.116L97.581 258.179V30zM67.582 237.741l-29.167-19.87 29.167-29.167zM481.995 482H30.002V248.439l139.997 95.375L88 425.815c-5.858 5.857-5.858 15.355 0 21.213s15.355 5.858 21.213 0l86.058-86.06c38.047 24.646 88.337 25.998 128.444.032l86.026 86.028c5.856 5.857 15.354 5.859 21.213 0 5.858-5.857 5.858-15.355 0-21.213l-82.32-82.322 133.361-94.423z'/%3E%3Cpath d='M152.58 100h206.836c8.284 0 15-6.716 15-15s-6.716-15-15-15H152.58c-8.284 0-15 6.716-15 15s6.716 15 15 15zM152.58 170h206.836c8.284 0 15-6.716 15-15s-6.716-15-15-15H152.58c-8.284 0-15 6.716-15 15s6.716 15 15 15zM152.58 240h206.836c8.284 0 15-6.716 15-15s-6.716-15-15-15H152.58c-8.284 0-15 6.716-15 15s6.716 15 15 15z'/%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-smtpcom-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 207.4 40'%3E%3Cpath fill='%232fb197' d='M.9.9h52.6L27.3 20z'/%3E%3Cpath d='M0 0v40h54.4V0H0zm25.7 20L1.8 37.3V2.7L25.7 20zM50.8 1.8l-23.5 17-23.7-17h47.2zm1.8 36.4H26l14.7-10.7-1.1-1.5-16.7 12.2H3.6l49-35.5v35.5z'/%3E%3Cg%3E%3Cpath d='M88.2 9.8C84.1 7.2 79.4 7 77.4 7c-1.9 0-3.4.4-4.4 1.2-1.1.8-1.6 1.9-1.6 3.2 0 1.2.6 2.3 1.9 3.1 1.2.8 2.9 1.8 5.3 2.5 4.3 1.5 8 3 10.2 4.8 2.2 1.8 3.4 4.5 3.4 7.5 0 3.3-1.8 6.1-4.3 8-2.5 1.9-5.9 2.6-10.1 2.6-2.9 0-10.9-.7-15.2-3.3l1.7-6.6c4.9 3.6 13.2 3.6 13.2 3.6 1.9 0 4.4-.3 5.4-1.1s1.6-1.8 1.6-3.2c0-1.5-.5-2.6-1.6-3.4-1-.8-3.6-1.8-6.3-2.7-2.7-.9-5-1.8-6.6-2.7-4.3-2.3-6.4-5.2-6.4-9.2 0-2.1.6-3.9 1.7-5.5 1.2-1.6 2.8-2.9 5-3.8 2.2-.9 4.6-1.4 7.3-1.4s8.6.5 12.7 2.5l-2.1 6.7zM108.8 2.2l9.6 20.4 10-20.4c.3-.6.9-1 1.5-1h8.9v38.1H131V28.9l.1-15.7-10 18.6h-5.4l-9.9-18.6.3 15.7v10.4h-7.8v-38h9c.7 0 1.3.3 1.5.9zM173.7 7.2h-11.2v32.1h-7.8V7.2h-11.2V2.3c0-.6.5-1 1-1h29.3v5.9zM186 25.5v13.9h-7.8V1.3H193c2.9 0 5.4.5 7.5 1.6 2.2 1 3.8 2.5 5 4.5 1.2 1.9 1.8 4.1 1.8 6.6 0 3.7-1.3 6.2-3.8 8.4-2.6 2.2-6.1 3.2-10.6 3.2H186zm0-5.9h7.2c2.1 0 3.7-.5 4.9-1.5 1.1-1 1.7-2.4 1.7-4.3s-.6-3.5-1.7-4.6c-1.1-1.2-2.7-1.8-4.7-1.8H186v12.2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-sparkpost-icon {
+  background-image: url("data:image/svg+xml,%3Csvg id='sparkpost' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 66.71'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234e4e55%7D%3C/style%3E%3C/defs%3E%3Cg id='sparkpost-2' data-name='sparkpost'%3E%3Cpath class='cls-1' d='M0 154.1l4-4.82c2.78 2.3 5.7 3.76 9.23 3.76 2.78 0 4.46-1.11 4.46-2.92V150c0-1.72-1.06-2.6-6.23-3.93-6.23-1.59-10.25-3.31-10.25-9.45v-.09c0-5.61 4.51-9.32 10.83-9.32a17.87 17.87 0 0111.48 3.93L20 136.29c-2.74-1.9-5.43-3-8-3s-4 1.2-4 2.7v.01c0 2 1.33 2.69 6.67 4.06 6.28 1.64 9.81 3.89 9.81 9.28v.09c0 6.14-4.68 9.58-11.35 9.58A19.67 19.67 0 010 154.1M40.84 143.27c3.4 0 5.39-2 5.39-4.68v-.09c0-3.05-2.12-4.68-5.52-4.68h-5.26v9.45zm-12.19-15.59h12.63c7.38 0 11.84 4.37 11.84 10.69v.09c0 7.15-5.57 10.87-12.5 10.87h-5.17v9.27h-6.8zM69.91 145.66l-4.11-10-4.11 10zm-7.16-18.2H69l13.28 31.14h-7.12l-2.82-6.93H59.26l-2.83 6.93h-6.94zM99.19 142.7c3.31 0 5.21-1.77 5.21-4.37v-.09c0-2.92-2-4.42-5.34-4.42H92.3v8.88zm-13.7-15h14.14c3.93 0 7 1.1 9 3.13a9.7 9.7 0 012.65 7.07v.1a9.61 9.61 0 01-6.62 9.59l7.55 11h-8l-6.63-9.89H92.3v9.89h-6.81zM158.24 145c5.75 0 9.63-3 9.63-7.6v-.08c0-4.91-3.8-7.47-9.36-7.47h-8.75V145zm-10.78-17.27h11.22c6.81 0 11.49 3.49 11.49 9.45v.09c0 6.5-5.61 9.85-12.06 9.85h-8.35v11.48h-2.3zM207 154.1l1.5-1.73c3.4 3.14 6.54 4.6 11.09 4.6s7.82-2.61 7.82-6.14v-.09c0-3.27-1.73-5.17-8.75-6.58-7.42-1.51-10.43-4-10.43-8.71v-.08c0-4.6 4.2-8.13 9.94-8.13a15.42 15.42 0 0110.58 3.76l-1.46 1.81a13.36 13.36 0 00-9.24-3.49c-4.55 0-7.55 2.61-7.55 5.83v.09c0 3.27 1.68 5.26 9 6.76 7.16 1.46 10.16 4 10.16 8.53v.09c0 5-4.28 8.43-10.25 8.43A17.6 17.6 0 01207 154.1M242.92 129.8h-10.78v-2.12H256v2.12h-10.78v28.8h-2.3zM122.75 140.69l10.7-13h8.31l-12.56 14.68 13.46 16.23h-8.75l-11.16-13.8v13.8h-6.81v-30.92h6.81z' transform='translate(0 -94.65)'/%3E%3Cpath d='M188.91 154.68a10.84 10.84 0 1110.83-10.83 10.83 10.83 0 01-10.83 10.83zm11-34.05c-3.44 2.6-4.11 7.19-4.21 10.28-5.45-6.29 10.08-24.82-7.56-36.26 10.92 14.13-15.55 28-15.55 48.85 0 8.16 5.11 15.36 16.31 17.85 11-2.34 16.41-9.69 16.41-17.85 0-12.17-7.58-16.24-5.4-22.87' transform='translate(0 -94.65)' fill='%23f15022'/%3E%3C/g%3E%3C/svg%3E");
+}
+.toplevel_page_yaysmtp .yaysmtp-zoho-icon {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 115.9 40' xml:space='preserve'%3E%3Cstyle%3E.st3%7Bfill:%23fff%7D%3C/style%3E%3Cg transform='translate(384 37)'%3E%3Cpath d='M-268-28.5V-1l-3.8 3.7v-26.9l3.8-4.3z' fill='%23e79225'/%3E%3Cpath d='M-293-28.4l-3.9 4.3.2.3 24.7-.2.2-.2 3.7-4.3-24.9.1z' fill='%23fff16d'/%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='-385.575' y1='4.374' x2='-385.575' y2='4.158' gradientTransform='matrix(111 0 0 -118.9 42514.5 496.3)'%3E%3Cstop offset='.006' stop-color='%23ffe513'/%3E%3Cstop offset='1' stop-color='%23fdb924'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23SVGID_1_)' d='M-296.9-24.2h25.1V2.7h-25.1z'/%3E%3Cpath class='st3' d='M-275.6-14.5c-.5-1.2-1.2-2.4-2.2-3.4-.9-1-2-1.7-3.1-2.2-1.2-.5-2.4-.7-3.8-.7s-2.6.2-3.8.7c-1.2.5-2.2 1.2-3.1 2.2-1 1-1.7 2.1-2.2 3.4-.5 1.2-.7 2.6-.7 4.1 0 1.4.2 2.8.7 4.1.5 1.3 1.2 2.4 2.2 3.4.9.9 1.9 1.6 3.1 2.1s2.4.7 3.8.7c1.3 0 2.6-.2 3.7-.7 1.2-.5 2.2-1.2 3.1-2.1 1-1 1.7-2.1 2.2-3.4.5-1.2.7-2.6.7-4.1.2-1.5-.1-2.8-.6-4.1zm-5.2 8.9c-1 1.2-2.3 1.7-3.9 1.7-1.7 0-3-.6-4-1.7-1-1.2-1.4-2.8-1.4-4.8 0-2.1.5-3.7 1.4-4.9 1-1.2 2.3-1.7 4-1.7 1.7 0 3 .6 3.9 1.7 1 1.2 1.4 2.8 1.4 4.9.1 2.1-.4 3.7-1.4 4.8z'/%3E%3C/g%3E%3Cg transform='translate(257 27)'%3E%3Cpath d='M-172.4-20.7v.1l3.2 24.7-1.9 5.2-.2-.2-3.3-23.7.1-.3 2.1-5.7v-.1z' fill='%23009ada'/%3E%3Cpath d='M-197.1-17.3l24.8-3.4-2.1 5.9-.3.3-23.1 3.4.1-4.2.6-2z' fill='%2391c9ed'/%3E%3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='-257.627' y1='14.321' x2='-257.42' y2='14.155' gradientTransform='matrix(122.2 0 0 -121.6 31284.5 1730.4)'%3E%3Cstop offset='.006' stop-color='%23008cd2'/%3E%3Cstop offset='1' stop-color='%2300649d'/%3E%3C/linearGradient%3E%3Cpath d='M-174.5-14.8l3.4 24.1-24.4 3.4-3.3-23.3 1.4-1.1 22.9-3.1z' fill='url(%23SVGID_2_)'/%3E%3Cpath class='st3' d='M-178.6-10.1c-.1-.7-.4-1.3-.8-1.7-.3-.3-.7-.5-1.2-.5h-.4c-.6.1-1.1.4-1.4.9-.2.3-.3.8-.3 1.3v.6l.9 6.3-7 1-.9-6.3c-.1-.7-.4-1.3-.8-1.7-.3-.3-.7-.5-1.2-.5h-.3c-.7.1-1.2.4-1.5.9-.2.3-.3.8-.3 1.3v.6l2.4 16.3c.1.7.4 1.3.8 1.7.3.3.7.4 1.2.4h.4c.6-.1 1.1-.4 1.4-.9.2-.3.3-.7.3-1.2v-.6l-1-6.5 7-1 1 6.5c.1.7.4 1.3.8 1.7.3.3.7.5 1.2.5h.4c.6-.1 1.1-.4 1.4-.9.2-.3.3-.7.3-1.2v-.6l-2.4-16.4z'/%3E%3C/g%3E%3Cg transform='translate(123)'%3E%3Cpath d='M-86.3 0l-8.8 20.9 1.2 9.2h.1l9.9-22.3v-.5L-86 .2l-.3-.2z' fill='%2366bf6b'/%3E%3Cpath d='M-86.3 0l2.3 7.7v.2l21.8 9.8h.1l-1.9-7.3L-86.3 0z' fill='%2398d0a0'/%3E%3ClinearGradient id='SVGID_3_' gradientUnits='userSpaceOnUse' x1='-122.601' y1='41.128' x2='-122.601' y2='40.97' gradientTransform='matrix(140.4 0 0 -142.7 17135.201 5885.6)'%3E%3Cstop offset='0' stop-color='%2326a146'/%3E%3Cstop offset='1' stop-color='%23008a52'/%3E%3C/linearGradient%3E%3Cpath d='M-84 7.7l21.9 9.9L-72 40l-21.9-9.9L-84 7.7z' fill='url(%23SVGID_3_)'/%3E%3Cpath class='st3' d='M-68.8 19.4c-.5-1.3-1.1-2.4-2-3.3s-1.9-1.6-3.1-2.2c-1.2-.5-2.4-.8-3.7-.8h-.1c-1.3 0-2.5.3-3.7.8-1.3.6-2.4 1.3-3.4 2.4-1 1-1.7 2.2-2.3 3.6-.6 1.4-.9 2.8-1 4.2v.5c0 1.2.2 2.4.6 3.6.5 1.2 1.1 2.3 2 3.2s1.9 1.6 3.2 2.2c1.2.5 2.4.8 3.7.8 1.2 0 2.5-.3 3.7-.8 1.3-.6 2.4-1.4 3.4-2.4s1.7-2.2 2.3-3.6c.6-1.4.9-2.8 1-4.2V23c.1-1.2-.1-2.4-.6-3.6zm-4.3 6.5c-.8 1.9-1.9 3.3-3.3 4-.7.4-1.5.6-2.2.6-.7 0-1.4-.2-2.1-.5-1.5-.7-2.5-1.7-2.9-3.2-.1-.5-.2-1-.2-1.6 0-1.1.3-2.3.8-3.6.8-2 1.9-3.4 3.3-4.1.7-.4 1.5-.6 2.2-.6.7 0 1.4.2 2.1.5 1.5.7 2.5 1.7 2.9 3.2.1.5.2 1 .2 1.5 0 1.2-.3 2.5-.8 3.8z'/%3E%3C/g%3E%3Cg transform='translate(0 15)'%3E%3Cpath d='M26.1-11.4l3.6 24-1.6 8.4-.2-.3-3.5-23.2V-3l1.5-8.1.2-.3z' fill='%23760d16'/%3E%3Cpath d='M0 .9l1.7-8.5 24.4-3.9-1.7 8.6v.6L.3 1.2 0 .9z' fill='%23ef463e'/%3E%3ClinearGradient id='SVGID_4_' gradientUnits='userSpaceOnUse' x1='1.091' y1='26.332' x2='1.122' y2='26.139' gradientTransform='matrix(124 0 0 -121.6 -123 3201.4)'%3E%3Cstop offset='0' stop-color='%23d92231'/%3E%3Cstop offset='1' stop-color='%23ba2234'/%3E%3C/linearGradient%3E%3Cpath d='M24.5-2.8L28.1 21 3.9 24.7 0 .9l24.5-3.7z' fill='url(%23SVGID_4_)'/%3E%3Cpath class='st3' d='M21.9 17.2c-.2-.2-.5-.4-.8-.5s-.7-.2-1.2-.2c-.4 0-.9 0-1.5.1L12 17.7c.1-.5.3-1.1.7-1.9.5-.9 1.2-1.9 2.1-3.2.3-.4.6-.7.7-1 .1-.2.3-.4.5-.7 1.5-1.9 2.4-3.5 2.7-4.7.2-.7.3-1.4.4-2.1v-.6c0-.5 0-1-.1-1.5.1-.3 0-.7-.2-1s-.3-.5-.6-.7c-.2-.2-.6-.2-1.1-.2-.4 0-.9 0-1.4.1L8.4 1.5c-.9.2-1.6.4-2 .8-.4.4-.5.8-.5 1.2v.4c.1.6.4 1.1 1 1.3.3.2.6.2 1.1.2.3 0 .6 0 1-.1l6.2-1.1v.3c0 .4-.1.8-.2 1.1-.2.5-.6 1.2-1.4 2.2-.2.2-.5.7-1 1.2-1.7 2-2.9 3.7-3.6 5.2-.5 1-.9 1.9-1.1 2.9-.1.6-.2 1.1-.2 1.6 0 .4 0 .7.1 1.1.2.5.3.9.5 1.2.2.3.4.6.6.7.2.1.6.2 1.1.2.6 0 1.4-.1 2.5-.3l6.7-1.2c1.2-.2 2-.5 2.5-.9.4-.3.6-.7.6-1.2v-.4c-.1-.2-.2-.5-.4-.7z'/%3E%3C/g%3E%3C/svg%3E");
+}
+/** SMTPer choose select2 - end **/
+
+.yay-smtp-wrap .yay-smtper-plugin {
+  border: 1px solid #ccd0d4;
+  width: 50%;
+  margin-bottom: 10px;
+  display: inline-flex;
+  cursor: pointer;
+}
+.yay-smtp-wrap .yay-smtper-plugin:hover {
+  background: #f0f0f1;
+}
+.yay-smtp-wrap .yay-smtper-plugin.active {
+  background: #f0f0f1;
+}
+.yay-smtp-wrap .yay-smtper-plugin .icon-smtp {
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
+.yay-smtp-wrap .yay-smtper-plugin .title-smtp {
+  margin: 8px;
+}
+
+.yay-smtp-wrap .yay-smtper-plugin .title-smtp span {
+  vertical-align: sub;
+}
+
+@media only screen and (max-width: 768px) {
+  .yay-smtp-wrap .yay-smtper-plugin {
+    min-width: 70%;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .yay-smtp-wrap .yay-smtper-plugin {
+    min-width: 100%;
+  }
+}
+
+.settings_page_yaysmtp_settings .yaysmtp-import-settings-notice {
+  display: none;
+}
+
+.yaysmtp-fallback-setting-opt-wrap,
+.yaysmtp-fallback-send-test-mail-wrap {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.yaysmtp-fallback-setting-detail-wrap .yay-smtp-card-body select,
+.yaysmtp-fallback-setting-detail-wrap .yay-smtp-card-body input[type="text"],
+.yaysmtp-fallback-setting-detail-wrap
+  .yay-smtp-card-body
+  input[type="password"] {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .yaysmtp-fallback-setting-opt-wrap,
+  .yaysmtp-fallback-send-test-mail-wrap {
+    min-width: 100%;
+  }
+}
+
+.yaysmtp-fallback-setting-detail-header {
+  font-size: 18px;
+}
+
+.yaysmtp-setting-mail-fallback-wrap,
+.yaysmtp-addition-setts-report-cb {
+  display: inline-flex;
+}
+
+.yaysmtp-setting-mail-fallback-wrap .mail-fallback-title,
+.yaysmtp-additional-settings-wrap .additional-settings-title {
+  margin-right: 6px;
+}
+
+.yaysmtp-fallback-setting-detail-wrap .setting-from-name {
+  margin-bottom: 20px;
+}
+.yay-smtp-card-body .setting-mail-report {
+  margin-bottom: 30px;
+}
+.yaysmtp-fallback-send-mail-action {
+  float: right;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+.yaysmtp-addition-setts-report-detail {
+  margin-top: 17px;
+  margin-left: 27px;
+}
+/* yaysmtp analytics email - start */
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap table .table-header {
+  padding: 8px 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: left;
+  background-color: #f8f9fa;
+}
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap table .table-item {
+  font-size: 0.8125rem;
+  border-bottom: 1px solid #e2e4e7;
+  padding: 10px 13px;
+}
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap .top-mail-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+#dashboard-widgets
+  .yaysmtp-analytics-email-wrap
+  .top-mail-table-wrap
+  .top-mail-title
+  h3 {
+  font-weight: 500;
+}
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap .top-mail-table,
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap .top-mail-table-empty {
+  display: none;
+}
+.yaysmtp-analytics-email-wrap .top-mail-table-wrap .top-mail-table-empty p {
+  color: #646970;
+  font-size: 16px;
+  text-align: center;
+}
+/* yaysmtp analytics email - end */
